@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Yummi
 
-`CURSO`
+`TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`4º PERÍODO`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto em desenvolvimento é um sistema de Cardápio Digital destinado a estabelecimentos de alimentação. A aplicação oferece aos clientes a possibilidade de visualizar diferentes categorias de itens de menu, selecionar produtos desejados e adicionar ao carrinho de compras. Além disso, a plataforma possui uma interface administrativa para a equipe do estabelecimento, onde eles podem gerenciar e atualizar o status dos pedidos, indicando se estão pendentes, em andamento ou concluídos. O objetivo é proporcionar uma experiência mais eficiente tanto para os clientes quanto para os funcionários na gestão dos pedidos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* José Vicente do Vale Melo
+* Karen Franco Alavarque Escobedo
+* Luiz Carlos Gil de Souza
+* Pedro Vitor Rodrigues da Silva 
 * Renato Liberato Ferreira
 * Ursula Daniela Figueiredo Barbosa
 
 ## Orientador
 
-* Nome completo do professor 1
+* Prof. Pedro Felipe Alves de Oliveira 
 
 ## Instruções de utilização
 
