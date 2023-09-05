@@ -70,7 +70,7 @@ Esse processo procura demonstrar as condições propostas a esses possíveis usu
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/raw/main/docs/img/Fluxo%203%20Yummi.jpg
 
-![Processo 3](docs/img/Fluxo 3 Yummi.jpg)
+![Processo 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/raw/main/docs/img/Fluxo%203%20Yummi.jpg)
 
 ## Indicadores de Desempenho
 
