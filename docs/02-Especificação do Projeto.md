@@ -54,7 +54,7 @@ Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios dig
 
 Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos presencialmente em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento presencial e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes por mesa, garçom sobrecarregado, desvio de função, risco de esquecimento, favorecimento aos clientes. 
 
-![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
+![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.16.33.jpeg)
 
 WhatsApp Image 2023-08-31 at 16.16.33.jpeg
 
@@ -62,7 +62,7 @@ WhatsApp Image 2023-08-31 at 16.16.33.jpeg
 
 Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos online em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento online e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes no atendimento telefônico, perda de tempo do atendente, risco de esquecimento. 
 
-![Processo 2](img/WhatsApp Image 2023-08-31 at 16.16.33.jpeg)
+![Processo 2](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
 
 Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo que auxilie clientes e restaurantes na busca de uma solução eficiente e eficaz, que os auxilie de forma rápida e prática na escolha dos cardápios disponíveis, através de uma plataforma digital elaborados dentro da plataforma. 
 
@@ -70,7 +70,7 @@ Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo
 
 Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 3](img/WhatsApp%20Image%202023-08-31%20at%2016.16.33.jpeg)
 
 ## Indicadores de Desempenho
 
