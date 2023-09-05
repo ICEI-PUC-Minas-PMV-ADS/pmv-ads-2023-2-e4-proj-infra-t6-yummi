@@ -72,6 +72,8 @@ Esse processo procura demonstrar as condições propostas a esses possíveis usu
 
 ![Processo 3](img/Fluxo%203%20Yummi.jpeg)
 
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/blob/main/docs/img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg
+
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
