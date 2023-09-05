@@ -68,8 +68,6 @@ Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo
 
 Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/raw/main/docs/img/Fluxo%203%20Yummi.jpg
-
 ![Processo 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/raw/main/docs/img/Fluxo%203%20Yummi.jpg)
 
 ## Indicadores de Desempenho
