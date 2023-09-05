@@ -54,7 +54,9 @@ Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios dig
 
 Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos presencialmente em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento presencial e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes por mesa, garçom sobrecarregado, desvio de função, risco de esquecimento, favorecimento aos clientes. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
+
+!https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/blob/main/docs/img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg
 
 ### Processo 2 – ATENDIMENTO ONLINE EM RESTAURANTES (AS-IS)
 
