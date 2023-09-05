@@ -56,16 +56,15 @@ Esse processo procura demonstrar as condições atuais como muitas pessoas fazem
 
 ![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
 
-!https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/blob/main/docs/img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg
+WhatsApp Image 2023-08-31 at 16.16.33.jpeg
 
 ### Processo 2 – ATENDIMENTO ONLINE EM RESTAURANTES (AS-IS)
 
 Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos online em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento online e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes no atendimento telefônico, perda de tempo do atendente, risco de esquecimento. 
 
+![Processo 2](img/WhatsApp Image 2023-08-31 at 16.16.33.jpeg)
 
 Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo que auxilie clientes e restaurantes na busca de uma solução eficiente e eficaz, que os auxilie de forma rápida e prática na escolha dos cardápios disponíveis, através de uma plataforma digital elaborados dentro da plataforma. 
-
-![Processo 2](img/02-bpmn-proc2.png)
 
 ### Processo 3 – ATENDIMENTO APP YUMMI EM RESTAURANTES (TO-BE)
 
