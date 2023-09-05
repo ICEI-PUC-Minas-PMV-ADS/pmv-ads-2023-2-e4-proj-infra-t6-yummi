@@ -44,21 +44,30 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios digitais com o objetivo de se aproximarem de seus clientes e possíveis públicos-alvo. De forma semelhante muitas pessoas têm encontrado nessa nova modalidade de atendimento, facilidades e agilidade para fazerem seus pedidos de forma rápida e prática.  
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios digitais com o objetivo de se aproximarem de seus clientes e possíveis públicos-alvo. De forma semelhante muitas pessoas têm encontrado nessa nova modalidade de atendimento, facilidades e agilidade para fazerem seus pedidos de forma rápida e prática. 
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – ATENDIMENTO PRESENCIAL EM RESTAURANTES (AS-IS)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos presencialmente em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento presencial e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes por mesa, garçom sobrecarregado, desvio de função, risco de esquecimento, favorecimento aos clientes. 
 
 ![Processo 1](img/02-bpmn-proc1.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – ATENDIMENTO ONLINE EM RESTAURANTES (AS-IS)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos online em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento online e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes no atendimento telefônico, perda de tempo do atendente, risco de esquecimento. 
+
+
+Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo que auxilie clientes e restaurantes na busca de uma solução eficiente e eficaz, que os auxilie de forma rápida e prática na escolha dos cardápios disponíveis, através de uma plataforma digital elaborados dentro da plataforma. 
+
+![Processo 2](img/02-bpmn-proc2.png)
+
+### Processo 3 – ATENDIMENTO APP YUMMI EM RESTAURANTES (TO-BE)
+
+Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
 
 ![Processo 2](img/02-bpmn-proc2.png)
 
