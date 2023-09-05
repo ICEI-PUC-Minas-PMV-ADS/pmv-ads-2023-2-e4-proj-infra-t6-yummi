@@ -68,9 +68,7 @@ Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo
 
 Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
 
-![Processo 3](img/Fluxo 3 Yummi.jpg)
-
-docs/img/Fluxo 3 Yummi.jpg
+![Processo 3](docs/img/Fluxo 3 Yummi.jpg)
 
 ## Indicadores de Desempenho
 
