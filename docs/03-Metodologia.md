@@ -60,7 +60,7 @@ etiquetas:
 
 ### Processo
 
-CO grupo utilizará ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, por meio das plataformas abaixo: 
+O grupo utilizará ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, por meio das plataformas abaixo: 
 
 |         AMBIENTE`          |        PLATAFORMA         |                  LINK DE ACESSO                               |
 |----------------------------|---------------------------|---------------------------------------------------------------|
