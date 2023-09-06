@@ -8,7 +8,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-|Diego Lopes| ![alt text](/docs/img/personas1.png) |
+|Diego Lopes| <img src="/docs/img/Persona1.jpg" width="150"> | 
 |-----------------------|-|
 |Idade:|35|
 |Ocupação:| Atleta Profissional |
@@ -17,23 +17,55 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |Frustrações | Fica frustrado quando precisa esperar muito tempo para conseguir fazer um pedido, Fica frustrado quando o processo de escolha dos pratos é complicado e demorado. |
 |Hobbies | Gosta de ler, Ouvir música, Viajar |
 
+|Melissa Soares| <img src="/docs/img/Persona2.png" width="200"> |
+|-----------------------|-|
+|Idade:|25|
+|Ocupação:| Publicitária |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify    |
+|Motivações | Entusiasta da comida que adora experimentar novos sabores e culinárias, Procura um cardápio digital que ofereça uma ampla variedade de pratos interessantes e únicos |
+|Frustrações | Se frustra quando encontra cardápios limitados e repetitivos, Não gosta quando não consegue ver fotos dos pratos para saber como são visualmente |
+|Hobbies | Gosta de cozinhar, Adora explorar restaurantes locais durante suas viagens, Ouvir música, Viajar |
+
+|Lucas Simão| <img src="/docs/img/Persona3.png" width="200"> |
+|-----------------------|-|
+|Idade:|15|
+|Ocupação:| Estudante do ensino médio |
+|Aplicativos:| WhatsApp, Facebook, Instagram |
+|Motivações | Adora sair com amigos e familiares para desfrutar de refeições, Procura um cardápio digital que facilite o compartilhamento de pedidos e a interação social durante a escolha das refeições  |
+|Frustrações | Se frustra quando não consegue encontrar opções adequadas para grupos grandes ou quando os pratos chegam em tempos diferentes, dificultando a experiência compartilhada. |
+|Hobbies | Andar de Skate, Ouvir música |
+
+|Elisa Andrade | <img src="/docs/img/Persona4.png" width="200"> |
+|-----------------------|-|
+|Idade:|75|
+|Ocupação:| Dona de casa, Aposentada |
+|Aplicativos:| WhatsApp |
+|Motivações | Comprometida com um estilo de vida saudável e busca opções nutritivas em todas as suas refeições  |
+|Frustrações | Se frustra quando não consegue encontrar informações claras sobre os ingredientes e valores nutricionais dos pratos |
+|Hobbies | Gosta de ler, Assistir TV |
+
+|Sergio Souza| <img src="/docs/img/Persona5.png" width="200"> |
+|-----------------------|-|
+|Idade:|35|
+|Ocupação:| Empresário |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos  |
+|Motivações | Tem uma vida agitada e está sempre em movimento. Ele busca conveniência e facilidade em suas escolhas de refeições. Um cardápio digital que ofereça opções de entrega rápida é o que ele procura   |
+|Frustrações | Se frustra quando os tempos de entrega são imprecisos ou quando os pedidos chegam com erros, Não gosta quando o processo de pagamento é complicado.  |
+|Hobbies | Academia, Jogar tênis  |
+
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Diego Lopes  | Pedir sua refeição de forma rápida e eficiente durante a pausa do almoço. | Está sempre ocupado com reuniões e treinos, então precisa economizar tempo no processo de pedido para continuar focado em suas tarefas.                |
+|Melissa Soares       | Quer descobrir e experimentar pratos autênticos da culinária local.                  | É apaixonada por comida e vê cada refeição como uma oportunidade de explorar novos sabores e culturas |
+|Lucas Simão       | Quer escolher pratos que sejam adequados para compartilhar com amigos durante um encontro.                  | Valoriza as experiências sociais e quer que a refeição seja uma oportunidade de se conectar e interagir com os outros.  |
+|Elisa Andrade       | Quer encontrar opções de pratos saudáveis e equilibrados em um cardápio.                  | Sua prioridade é manter um estilo de vida saudável, e ela busca opções alimentares que se alinhem com sua dieta e valores nutricionais. |
+|Sergio Souza       |Quer pedir comida para entrega rápida e sem complicações.                 | Está sempre em movimento e precisa de uma solução conveniente para alimentar-se enquanto continua a trabalhar.  |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
@@ -76,36 +108,35 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Os requisitos funcionais de um sistema descrevem o que ele deve fazer, correspondem a uma funcionalidade que deve estar presente na plataforma. Já os requisitos não funcionais de um sistema descrevem como ele deve fazer, correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro. 
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve mostrar uma lista de pratos disponíveis no cardápio com suas respectivas descrições e preços | ALTA | 
+|RF-002|O sistema deve organizar os pratos por categorias (entradas, pratos principais, sobremesas, etc.).  | ALTA |
+|RF-003|O sistema deve fornecer informações detalhadas para cada prato, como ingredientes, quantidades.   | MÉDIA |
+|RF-004|O sistema deve permitir que os restaurantes incluam imagens de alta qualidade de cada prato para exibição aos clientes  | MÉDIA |
+|RF-005|O sistema deve possibilitar que os clientes adicionem itens do cardápio ao carrinho de compras para fazer um pedido diretamente através do aplicativo.   | ALTA |
+|RF-006|O sistema deve permitir que os usuários criem contas personalizadas com informações como nome, e-mail e senha.   | ALTA |
+|RF-007|O sistema deve permitir que os usuários visualizem o resumo de seus pedidos antes de finalizar.  | ALTA |
+|RF-008|O sistema deve fornecer informações em tempo real sobre o status do pedido, desde o processamento até a entrega.  | MÉDIA |
+|RF-009|O sistema deve permitir que os usuários escolham entre retirada no restaurante ou entrega em domicílio.  | MÉDIA |
+|RF-010|Os clientes poderão personalizar os pratos selecionados, escolhendo opções como ingredientes extras ou remoção de componentes.  | MÉDIA |
+|RF-011|O sistema deve permitir que quaisquer alterações feitas no cardápio (adição, edição ou remoção de pratos) devem ser atualizadas instantaneamente no aplicativo.   | ALTA |
+|RF-012|O sistema deve permitir que os usuários façam login usando e-mail e senha.  | ALTA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O cardápio digital deve ser compatível com uma variedade de dispositivos e navegadores, garantindo que os clientes possam acessá-lo independentemente do dispositivo que estejam usando. | ALTA | 
+|RNF-002| Toda operação de inserção no sistema não deve ultrapassar 5 segundos  |  MÉDIA | 
+|RNF-003| O sistema deverá manter o funcionamento de 96% do tempo em 24hrs por dia, dos 7 dias da semana. |  MÉDIA |
+|RNF-004| O sistema deve ser dimensionável para lidar com picos de tráfego, como horários de pico de pedidos, sem comprometer o desempenho.  |  ALTA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -113,14 +144,14 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| O sistema pode ser acessado apenas por dispositivos compatíveis, como smartphones, tablets e computadores, que tenham acesso à internet e suportem os navegadores e aplicativos relevantes.  |
+|02| Pode haver limites para o tamanho e tipo de arquivos de imagem que podem ser carregados para os pratos no cardápio.         |
+|03| A primeira etapa do projeto deverá ser entregue até o dia 03/09/2023. |
+|04| A segunda etapa do projeto deverá ser entregue até o dia 01/10/2023.         |
+|05| A terceira etapa do projeto deverá ser entregue até o dia 29/10/2023. |
+|06| A quarta etapa do projeto deverá ser entregue até o dia 26/11/2023.         |
+|07| A quinta etapa do projeto deverá ser entregue até o dia 10/12/2023.        |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
