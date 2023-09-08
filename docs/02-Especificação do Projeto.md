@@ -99,12 +99,16 @@ Esse processo procura demonstrar as condições propostas a esses possíveis usu
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+|Indicador|Objetivo|Descrição|Cálculo|Fonte de dados|Perspectiva| 
+|---------|--------|---------|-------|--------------|-----------|
+|Número de downloads|Avaliar o alcance e a popularidade do aplicativo|Quantidade de pessoas que baixaram o aplicativo em seus dispositivos móveis|Número total de downloads do aplicativo|Loja de aplicativos (Google Play, App Store, etc.)|Mercado|
+|Taxa de conversão|Avaliar a eficácia do aplicativo em gerar vendas|Porcentagem de pessoas que acessaram o aplicativo e realizaram um pedido no restaurante|(Número de pedidos realizados pelo aplicativo / Número de acessos ao aplicativo) x 100|Aplicativo e sistema do restaurante|Financeira| 
+|Tempo médio de permanência|Avaliar o engajamento e a satisfação dos usuários com o conteúdo do aplicativo|Tempo médio que as pessoas passam navegando no aplicativo|Soma dos tempos de permanência de todos os usuários / Número total de usuários|Aplicativo e ferramenta de análise (Google Analytics, etc.)|Cliente|
+|Taxa de retenção|Avaliar a fidelidade e a lealdade dos usuários com o aplicativo|Porcentagem de pessoas que baixaram o aplicativo e continuam a usá-lo após um determinado período de tempo|(Número de usuários ativos no final do período / Número de usuários no início do período) x 100|Aplicativo e ferramenta de análise (Google Analytics, etc.)|Mercado| 
+|Número de avaliações|Avaliar a reputação e a qualidade do aplicativo e do restaurante|Quantidade de pessoas que deixaram uma avaliação sobre o aplicativo ou o restaurante na loja de aplicativos ou em outras plataformas|Número total de avaliações recebidas pelo aplicativo ou pelo restaurante|Loja de aplicativos (Google Play, App Store, etc.) e outras plataformas (TripAdvisor, Yelp, etc.)|Cliente| 
+|Taxa de abandono|Identificar possíveis problemas ou dificuldades no processo de compra do aplicativo|Porcentagem de pessoas que iniciaram um pedido no aplicativo e desistiram antes de finalizá-lo|(Número de pedidos abandonados pelo aplicativo / Número de pedidos iniciados pelo aplicativo) x 100|Aplicativo e sistema do restaurante|Processo|
+|Taxa de satisfação|Avaliar a performance e a excelência do aplicativo e do restaurante|Porcentagem de pessoas que realizaram um pedido no aplicativo e ficaram satisfeitas com o produto e o serviço recebidos|(Número de avaliações positivas recebidas pelo aplicativo ou pelo restaurante / Número total de avaliações recebidas pelo aplicativo ou pelo restaurante) x 100|Loja de aplicativos (Google Play, App Store, etc.) e outras plataformas (TripAdvisor, Yelp, etc.)|Cliente|Processo| 
 
 ## Requisitos
 
