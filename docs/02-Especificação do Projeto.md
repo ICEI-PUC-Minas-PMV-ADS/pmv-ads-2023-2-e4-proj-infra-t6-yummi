@@ -75,7 +75,7 @@ Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios dig
 
 ### Descrição Geral da Proposta
 
-Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios digitais com o objetivo de se aproximarem de seus clientes e possíveis públicos-alvo. De forma semelhante muitas pessoas têm encontrado nessa nova modalidade de atendimento, facilidades e agilidade para fazerem seus pedidos de forma rápida e prática. 
+Pensando nisso foi desenvolvido o projeto do aplicativo “Yummi”, que busca justamente auxiliar seus usuários na busca de restaurantes e na escolha dos cardápios disponíveis. É uma ferramenta que possibilita a seus usuários escolherem os pratos de suas preferências, fazerem reservas de mesas, não dependerem de disponibilidade de garçons, terem seus pedidos feitos diretamente na cozinha e poderem fazer o pagamento sem fila de espera no caixa. 
 
 ### Processo 1 – ATENDIMENTO PRESENCIAL EM RESTAURANTES (AS-IS)
 
