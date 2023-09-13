@@ -119,17 +119,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| O sistema deve mostrar uma lista de pratos disponíveis no cardápio com suas respectivas descrições e preços | ALTA | 
-|RF-002|O sistema deve organizar os pratos por categorias (entradas, pratos principais, sobremesas, etc.).  | ALTA |
-|RF-003|O sistema deve fornecer informações detalhadas para cada prato, como ingredientes, quantidades.   | MÉDIA |
+|RF-002|O sistema deve organizar os pratos por categorias (entradas, pratos principais, sobremesas, etc.)  | ALTA |
+|RF-003|O sistema deve fornecer informações detalhadas para cada prato, como ingredientes, quantidades   | MÉDIA |
 |RF-004|O sistema deve permitir que os restaurantes incluam imagens de alta qualidade de cada prato para exibição aos clientes  | MÉDIA |
-|RF-005|O sistema deve possibilitar que os clientes adicionem itens do cardápio ao carrinho de compras para fazer um pedido diretamente através do aplicativo.   | ALTA |
-|RF-006|O sistema deve permitir que os usuários criem contas personalizadas com informações como nome, e-mail e senha.   | ALTA |
-|RF-007|O sistema deve permitir que os usuários visualizem o resumo de seus pedidos antes de finalizar.  | ALTA |
-|RF-008|O sistema deve fornecer informações em tempo real sobre o status do pedido, desde o processamento até a entrega.  | MÉDIA |
-|RF-009|O sistema deve permitir que os usuários escolham entre retirada no restaurante ou entrega em domicílio.  | MÉDIA |
-|RF-010|Os clientes poderão personalizar os pratos selecionados, escolhendo opções como ingredientes extras ou remoção de componentes.  | MÉDIA |
-|RF-011|O sistema deve permitir que quaisquer alterações feitas no cardápio (adição, edição ou remoção de pratos) devem ser atualizadas instantaneamente no aplicativo.   | ALTA |
+|RF-005|O sistema deve possibilitar que os clientes adicionem itens do cardápio ao carrinho de compras para fazer um pedido diretamente através do aplicativo   | ALTA |
+|RF-006|O sistema deve permitir que os restaurantes criem contas personalizadas com informações como nome, e-mail e senha   | ALTA |
+|RF-007|O sistema deve permitir que os clientes visualizem o resumo de seus pedidos antes de finalizar  | ALTA |
+|RF-008|O sistema deve permitir que os clientes sejam capazes de escanear o QR code facilmente usando seus smartphones para acessar o cardápio digital | ALTA |
+|RF-009|O sistema deve permitir que a equipe do restaurante receba os pedidos dos clientes em tempo real  | ALTA |
+|RF-010|O sistema deve permitir os clientes sejam capazes de fazer pedidos especiais ou adicionais, como ingredientes extras, sem cebola, molhos do lado, etc | MÉDIA |
+|RF-011|O sistema deve incluir instruções claras ao lado do QR code para orientar os clientes sobre como escaneá-lo corretamente  | ALTA |
 |RF-012|O sistema deve permitir que os usuários façam login usando e-mail e senha.  | ALTA |
+|RF-013|O sistema deve garantir que, após o escaneamento bem-sucedido, os clientes sejam redirecionados automaticamente para a interface do cardápio digital, sem a necessidade de ações adicionais| MÉDIA |
+
 
 
 ### Requisitos não Funcionais
