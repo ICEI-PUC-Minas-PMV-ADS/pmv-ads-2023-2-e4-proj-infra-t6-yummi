@@ -182,9 +182,6 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
-out/
-obj/*
-obj/staticwebassets.pack.sentinel
 
 # Publish Web Output
 *.[Pp]ublish.xml
