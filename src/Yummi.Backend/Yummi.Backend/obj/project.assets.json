@@ -1523,19 +1523,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\karen\\.nuget\\packages\\": {}
+    "C:\\Users\\pedri\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\karen\\Desktop\\repositorios Github\\Yummi.Backend\\Yummi.Backend\\Yummi.Backend.csproj",
+      "projectUniqueName": "D:\\PUC - Projetos\\Eixo_4\\pmv-ads-2023-2-e4-proj-infra-t6-yummi\\src\\Yummi.Backend\\Yummi.Backend\\Yummi.Backend.csproj",
       "projectName": "Yummi.Backend",
-      "projectPath": "C:\\Users\\karen\\Desktop\\repositorios Github\\Yummi.Backend\\Yummi.Backend\\Yummi.Backend.csproj",
-      "packagesPath": "C:\\Users\\karen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\karen\\Desktop\\repositorios Github\\Yummi.Backend\\Yummi.Backend\\obj\\",
+      "projectPath": "D:\\PUC - Projetos\\Eixo_4\\pmv-ads-2023-2-e4-proj-infra-t6-yummi\\src\\Yummi.Backend\\Yummi.Backend\\Yummi.Backend.csproj",
+      "packagesPath": "C:\\Users\\pedri\\.nuget\\packages\\",
+      "outputPath": "D:\\PUC - Projetos\\Eixo_4\\pmv-ads-2023-2-e4-proj-infra-t6-yummi\\src\\Yummi.Backend\\Yummi.Backend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\karen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pedri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1604,7 +1611,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

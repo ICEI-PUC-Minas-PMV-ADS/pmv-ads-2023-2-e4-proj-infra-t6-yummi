@@ -45,3 +45,9 @@ C:\Users\karen\Desktop\repositorios Github\Yummi.Backend\Yummi.Backend\bin\Debug
 C:\Users\karen\Desktop\repositorios Github\Yummi.Backend\Yummi.Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\karen\Desktop\repositorios Github\Yummi.Backend\Yummi.Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\karen\Desktop\repositorios Github\Yummi.Backend\Yummi.Backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.GeneratedMSBuildEditorConfig.editorconfig
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.AssemblyInfoInputs.cache
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.AssemblyInfo.cs
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.csproj.CoreCompileInputs.cache
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.MvcApplicationPartsAssemblyInfo.cs
+D:\PUC - Projetos\Eixo_4\pmv-ads-2023-2-e4-proj-infra-t6-yummi\src\Yummi.Backend\Yummi.Backend\obj\Debug\net6.0\Yummi.Backend.MvcApplicationPartsAssemblyInfo.cache
