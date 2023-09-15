@@ -193,7 +193,7 @@ Para esse fim, construímos o gráfico de Gantt conforme disposto na figura 3. E
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Equipe_OK](https://user-images.githubusercontent.com/101661631/222968369-1da7026f-0dc4-478d-aa2a-13dfcf3fc454.png)
+<img src="/docs/img/Ago.png">
 
 ## Gestão de Orçamento
 
