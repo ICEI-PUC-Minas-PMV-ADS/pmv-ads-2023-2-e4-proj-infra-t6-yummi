@@ -183,7 +183,11 @@ O gráfico de Gantt é uma ferramenta de gerenciamento de projetos que exibe vis
 
 Para esse fim, construímos o gráfico de Gantt conforme disposto na figura 3. Ele contém uma lista de tarefas ou atividades na vertical e um eixo horizontal que representa o tempo. As barras horizontais representam a duração de cada atividade e a posição das barras no eixo do tempo indica quando cada atividade deve começar e terminar.
 
-![Imagem2](https://user-images.githubusercontent.com/100963513/222823446-4bc42cdf-93c7-4517-80ca-d3b8b9a6c8c7.png)
+
+<img src="/docs/img/graficoGant1.png">
+
+<img src="/docs/img/graficoGant2.png">
+
 
 ## Gerenciamento de Equipe
 
