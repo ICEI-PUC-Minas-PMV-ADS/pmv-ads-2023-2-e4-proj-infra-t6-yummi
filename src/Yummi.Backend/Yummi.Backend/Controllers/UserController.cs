@@ -8,6 +8,7 @@ using System.Text;
 using Yummi.Backend.Data;
 using Yummi.Backend.Dtos.Users;
 using Yummi.Backend.Models;
+using Yummi.Backend.Service;
 
 namespace Yummi.Backend.Controllers
 {
@@ -17,14 +18,16 @@ namespace Yummi.Backend.Controllers
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserRepository userRepository, IConfiguration configuration)
+        public UserController(IUserRepository userRepository, IConfiguration configuration, ILogger<UserController> logger)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _logger = logger;
         }
 
-        [HttpPost("register")]
+        [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult<User>> CreateUser([FromBody] UserCreateDto userCreateDto)
         {
@@ -32,8 +35,11 @@ namespace Yummi.Backend.Controllers
             {
                 var existUser = _userRepository.GetAllUsers().FirstOrDefault(e => e.Email == userCreateDto.Email);
 
-                if (existUser != null)
-                    return Conflict("Esse usuário já está cadastrado!");
+                if (existUser != null){
+                    string logMessage = "Esse usuário já está cadastrado!";
+                    _logger.LogDebug(message: logMessage);
+                    return Conflict(logMessage);
+                }
 
                 var user = new User
                 {
@@ -61,7 +67,7 @@ namespace Yummi.Backend.Controllers
                 if (user == null)
                     return NotFound("Usuário não encontrado!");
 
-                var token = GetToken(user);
+                var token = Activator.CreateInstance<TokenService>().GetToken(user, _configuration);
                 return Ok(new
                 {
                     user = user,
@@ -82,7 +88,7 @@ namespace Yummi.Backend.Controllers
             return Ok(userResult);
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("{id}")]
         [Authorize]
         public async Task<ActionResult<User>> UpdateUser([FromBody] UserUpdateDto userUpdateDto, string id)
         {
@@ -129,20 +135,5 @@ namespace Yummi.Backend.Controllers
                 return BadRequest(e.Message);
             }
         }
-
-        private string GetToken(User user)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["JWT_Secret"]);
-            var tokenDescription = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, user.Name) }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescription);
-            return tokenHandler.WriteToken(token);
-        }
-
     }
 }

@@ -1,0 +1,59 @@
+# docker-compose.yml
+version: "3.8"
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    environment:
+        - MONGO_INITDB_ROOT_USERNAME=root
+        - MONGO_INITDB_ROOT_PASSWORD=root
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    #volumes:
+    #  - ./database/db:/data/db
+    #  - ./database/dev.archive:/Databases/dev.archive
+    #  - ./database/production:/Databases/production
+    networks:
+      - backend
+
+  mongo-express:
+    image: mongo-express
+    container_name: mexpress
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
+      - ME_CONFIG_MONGODB_URL=mongodb://root:root@mongo:27017?authSource=admin
+      - ME_CONFIG_BASICAUTH_USERNAME=mexpress
+      - ME_CONFIG_BASICAUTH_PASSWORD=mexpress
+    links:
+      - mongo
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    networks:
+      - backend
+
+  yummi.services.backend:
+    image: yummi.services.backend
+    container_name: yummi.services.backend
+    build:
+      context: ./Yummi.Backend/
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseConfiguration:ConnectionString=mongodb://root:root@mongo:27017?authSource=admin"
+    depends_on:
+      - mongo
+    command:
+      - echo "yummi.services.backend:success!"
+    ports:
+      - '4000:80'
+    links:
+      - mongo
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
