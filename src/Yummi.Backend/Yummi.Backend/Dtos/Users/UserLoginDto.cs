@@ -5,7 +5,7 @@ namespace Yummi.Backend.Dtos.Users
     public class UserLoginDto
     {
         [Required]
-        public string Email { get; set; }
+        public string Login { get; set; }
         [Required]
         public string Password { get; set; }
     }

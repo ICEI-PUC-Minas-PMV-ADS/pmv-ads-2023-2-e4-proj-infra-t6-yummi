@@ -38,9 +38,9 @@ namespace Yummi.Backend.Data
             return await _usersCollection.FindAsync(x => x.Id == id).Result.FirstAsync();
         }
 
-        public async Task<User> LoginAsync(string email, string password)
+        public async Task<User> LoginAsync(string login, string password)
         {
-            return await _usersCollection.FindAsync(x => x.Email == email && x.Password == password).Result.FirstOrDefaultAsync();
+            return await _usersCollection.FindAsync(x => x.Login == login && x.Password == password).Result.FirstOrDefaultAsync();
         }
 
         public async Task UpdateUserAsync(User user)

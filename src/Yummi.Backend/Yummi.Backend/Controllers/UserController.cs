@@ -33,19 +33,25 @@ namespace Yummi.Backend.Controllers
         {
             try
             {
-                var existUser = _userRepository.GetAllUsers().FirstOrDefault(e => e.Email == userCreateDto.Email);
+                var existUser = _userRepository.GetAllUsers().FirstOrDefault(e => e.Login == userCreateDto.Login);
 
-                if (existUser != null){
+                if (existUser != null)
+                {
                     string logMessage = "Esse usuário já está cadastrado!";
                     _logger.LogDebug(message: logMessage);
                     return Conflict(logMessage);
                 }
 
+                // Se usuario administrador o login será via email, 
+                // Porém se usuario cliente o login será via Id Unico 
+                // do dispositivo, não sendo necessário email
                 var user = new User
                 {
-                    Email = userCreateDto.Email,
+                    Email = userCreateDto.Perfil == Enum.PerfilEnum.ADMINISTRADOR ? userCreateDto.Login : string.Empty,
+                    Login = userCreateDto.Login,
                     Name = userCreateDto.Name,
-                    Password = userCreateDto.Password
+                    Password = userCreateDto.Password,
+                    Perfil = userCreateDto.Perfil
                 };
 
                 await _userRepository.CreateUserAsync(user);
@@ -63,11 +69,11 @@ namespace Yummi.Backend.Controllers
         {
             try
             {
-                var user = await _userRepository.LoginAsync(userLoginDto.Email, userLoginDto.Password);
+                var user = await _userRepository.LoginAsync(login: userLoginDto.Login, password: userLoginDto.Password);
                 if (user == null)
                     return NotFound("Usuário não encontrado!");
 
-                var token = Activator.CreateInstance<TokenService>().GetToken(user, _configuration);
+                var token = Activator.CreateInstance<TokenService>().GetToken(user: user, _configuration);
                 return Ok(new
                 {
                     user = user,

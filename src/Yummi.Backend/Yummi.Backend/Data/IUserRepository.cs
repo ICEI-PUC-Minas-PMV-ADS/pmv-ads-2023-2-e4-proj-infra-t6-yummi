@@ -5,7 +5,7 @@ namespace Yummi.Backend.Data
 {
     public interface IUserRepository
     {
-        Task<User> LoginAsync(string email, string password);
+        Task<User> LoginAsync(string login, string password);
         Task CreateUserAsync(User user);
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(string id);
