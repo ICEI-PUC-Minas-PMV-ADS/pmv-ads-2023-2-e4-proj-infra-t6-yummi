@@ -65,7 +65,7 @@ O grupo utilizará ferramentas on-line para acompanhar o andamento do projeto, a
 |         AMBIENTE`          |        PLATAFORMA         |                  LINK DE ACESSO                               |
 |----------------------------|---------------------------|---------------------------------------------------------------|
 |Repositório de código fonte |         GitHub            |[Yummi](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi)|
-|Design de Interfaces        |         Miro              |[Miro.com] (https://miro.com/app/board/uXjVMhdvtv4=/?share_link_id=865423816675) |
+|Design de Interfaces        |         Miro              |[Miro.com](https://miro.com/app/board/uXjVMhdvtv4=/?share_link_id=865423816675) |
 |Gerenciamento do Projeto    |         Trello            |[Trello](https://trello.com/invite/b/RMEz7h6s/ATTI7c53e065d5669332dab7314bfa052138A772BFAB/projeto-desenvolvimento-de-uma-aplicacao-distribuida)|
 |Comunicação e Reuniões      |      Teams/WhatsApp       |[Grupo 02 - Projeto: Yummi](https://teams.microsoft.com/l/meetup-join/19:91f0c36d68a84bec972cfbdb4ebfee49@thread.tacv2/1693441292627?context=%7B%22Tid%22:%2214cbd5a7-ec94-46ba-b314-cc0fc972a161%22,%22Oid%22:%22b440f487-0c62-401a-95bc-5d22f3a32d27%22%7D) |
 
