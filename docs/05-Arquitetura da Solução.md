@@ -24,15 +24,19 @@ Nesta etapa, não será necessário criar um modelo relacional, pois nossos dado
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+Neste projeto, optamos por não adotar um esquema relacional devido à natureza variável e semiestruturada dos nossos dados, que tornaria a criação de tabelas e relacionamentos complexa e inflexível. Além disso, prevemos mudanças frequentes na estrutura dos dados, o que seria mais facilmente gerenciado com um banco de dados NoSQL, oferecendo simplicidade e flexibilidade na modelagem de dados para atender às nossas necessidades que estão em constante evolução.
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+**UserCreate**
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/93ce1f3f-af03-479c-98d4-3c15d24bac09)
+
+**ProductCreate**
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/8b0ac152-d350-4bb6-bb34-eabb3948ab8b)
+
+
 
 ## Tecnologias Utilizadas
 
