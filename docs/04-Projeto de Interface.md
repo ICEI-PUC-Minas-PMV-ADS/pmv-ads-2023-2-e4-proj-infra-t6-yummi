@@ -1,11 +1,29 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+O Yummi - Cardápio Digital, foi projetado para atender às necessidades tanto dos clientes quanto dos administradores de forma intuitiva e eficaz. Abaixo, apresentamos as principais interfaces e funcionalidades do sistema por meio de wireframes:
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+**Tela - Yummi - Cardápio Digital (Cliente):**
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+- Na tela inicial, o cliente é apresentado ao cardápio digital, onde pode visualizar os itens disponíveis para pedido.
+- Os itens são organizados em categorias, facilitando a busca por produtos específicos.
+- Os clientes podem navegar pelas categorias, visualizar detalhes dos itens, adicionar produtos e finalizar o pedido.
+- O cliente pode ajustar a quantidade de itens e removê-los, se necessário.
+- O valor total do pedido é claramente exibido.
+- Após revisão, o cliente pode finalizar o pedido.
+
+**Tela de Gerenciamento de Pedidos (Admin):**
+
+- Os administradores têm acesso a uma interface de gerenciamento de pedidos.
+- Eles podem visualizar pedidos em tempo real, confirmar pedidos e atualizar o status.
+- Os administradores podem visualizar e atualizar o menu, adicionar novos itens, definir preços e categorias.
+- Eles têm controle total sobre o conteúdo disponível para os clientes.
+
+**Tela de Login (Admin):**
+
+- Os administradores devem fazer login para acessar recursos específicos, como gerenciar pedidos e o menu.
+- A autenticação pode ser feita por e-mail/senha ou outro método seguro.
+- Os administradores podem atualizar informações pessoais, como senha, e-mail e foto.
 
 ## Diagrama de Fluxo
 
@@ -35,7 +53,7 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 
 **Tela - Itens Cadastrados** ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/6f2c5b47-1b0c-4685-91ca-8bc753204da0)
 
-**Tela - Pedidos Pendentes** ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/0c784889-2fea-485b-ade9-87a72007621c)
+**Tela de Gerenciamento de Pedidos** ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/0c784889-2fea-485b-ade9-87a72007621c)
 
 **Tela - Yummi - Cardápio Digital**    
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi/assets/101661631/4db9a9f1-658f-45b6-a960-25415606e7c4)
