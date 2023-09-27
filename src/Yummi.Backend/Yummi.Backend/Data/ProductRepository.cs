@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+/*using Microsoft.EntityFrameworkCore;
 
 namespace Yummi.Backend.Data
 {
@@ -17,4 +17,4 @@ namespace Yummi.Backend.Data
             // Configurações adicionais do modelo, se necessário
         }
     }
-}
+}*/

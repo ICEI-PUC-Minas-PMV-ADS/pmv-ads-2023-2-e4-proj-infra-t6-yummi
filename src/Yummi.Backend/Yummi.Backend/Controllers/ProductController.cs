@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -95,4 +95,4 @@ namespace Yummi.Backend.Controllers
             return _context.Products.Any(e => e.Id == id);
         }
     }
-}
+}*/
