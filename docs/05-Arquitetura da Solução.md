@@ -4,7 +4,8 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![Arquitetura da Solução](img/Solução da Arquitetura Yummi.jpeg)
+docs/img/Solução da Arquitetura Yummi.jpeg
 
 ## Diagrama de Classes
 
