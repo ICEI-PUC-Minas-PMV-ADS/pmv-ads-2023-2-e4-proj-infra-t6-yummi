@@ -67,15 +67,57 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+Considerando o contexto do projeto, as seguintes subcaracterísticas da norma ISO/IEC 25010 podem ser priorizadas:
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+**Funcionalidade:**
+- Adequação funcional: Verificar se o sistema atende às funcionalidades essenciais, como exibir o cardápio, permitir pedidos e gerenciar o menu.
+          
+**Usabilidade:** 
+- Inteligibilidade: Avaliar a clareza e a facilidade de uso da interface, tornando-a intuitiva para clientes e administradores.
+- Aprendizado: Garantir que os usuários possam aprender a usar o sistema rapidamente, sem dificuldades.
+    
+**Confiabilidade:**
+- Disponibilidade: Assegurar que o sistema esteja disponível quando os clientes desejarem acessá-lo.
+          
+**Eficiência:**
+- Desempenho: Medir a velocidade de carregamento das páginas do cardápio e a responsividade do sistema durante picos de uso.
+          
+**Manutenibilidade:**
+ - Modificabilidade: Avaliar quão fácil é modificar o sistema para adicionar novos itens de menu, atualizar preços ou incorporar funcionalidades adicionais.
+          
+**Portabilidade:**
+- Adaptabilidade: Certificar-se de que o sistema possa ser acessado de forma eficaz em diferentes dispositivos, como smartphones e computadores.
+          
+**Segurança:**
+- Confidencialidade: Garantir que as informações do cardápio sejam protegidas contra acessos não autorizados.
+          
+**Compatibilidade:**
+- Compatibilidade com navegadores: Certificar-se de que o cardápio digital seja compatível com os principais navegadores da web.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+As características e subcaracterísticas apresentadas foram escolhidas com base nas necessidades específicas de um cardápio digital, onde a experiência do usuário desempenha um papel fundamental. Abaixo está a justificativa para cada uma delas:
+
+|Característica de Qualidade| Subcaracterísticas |Justificativa      |
+|--------------------|------------------------------------|----------------------------------------|
+| Funcionalidade  | Adequação funcional | A funcionalidade essencial de um cardápio digital é permitir que os clientes visualizem os itens do menu, façam pedidos e que os administradores possam gerenciar o menu. Essa subcaracterística garante que o sistema atenda a essas funções críticas.
+| Usabilidade | Inteligibilidade | A clareza e facilidade de uso da interface são vitais para que clientes e administradores possam navegar pelo sistema de forma intuitiva. Isso melhora a satisfação do usuário e reduz a curva de aprendizado.
+| Usabilidade | Aprendizado | Garantir que os usuários possam aprender a usar o sistema rapidamente é importante, pois torna o processo de adaptação mais suave para clientes e administradores, resultando em maior eficiência.
+| Confiabilidade | Disponibilidade | A disponibilidade contínua do sistema é crucial, pois os clientes devem acessar o cardápio digital a qualquer momento. Isso impede interrupções no serviço.
+| Eficiência | Desempenho | A velocidade de carregamento das páginas do cardápio afeta diretamente a experiência do usuário. Medir o desempenho durante picos de uso ajuda a garantir que o sistema seja responsivo em todos os momentos.
+| Manutenibilidade | Modificabilidade | A facilidade de modificar o sistema para adicionar novos itens de menu, atualizar preços ou incorporar funcionalidades adicionais é crucial para manter o cardápio atualizado e adaptado às constantes mudança.
+| Portabilidade | Adaptabilidade | Garantir que o sistema seja acessível em diferentes dispositivos, como smartphones e computadores, é essencial para atender a uma variedade de usuários.
+| Segurança | Confidencialidade | Proteger as informações do cardápio contra acessos não autorizados é fundamental para manter a integridade dos dados.
+| Compatibilidade | Compatibilidade com navegadores | Certificar-se de que o cardápio digital funcione perfeitamente nos principais navegadores da web garante que os usuários possam acessá-lo independentemente do navegador que preferem.
+
+
+|Subcaracterísticas| Métrica |Escala      |Peso      |
+|--------------------|------------------------------------|----------------------------------------|----------------------------------------|
+| Adequação funcional | Todas funcionalidades essenciais foram implementadas? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Inteligibilidade: | Os usuários conseguem acessar com total intuitividade e facilidade? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Aprendizado | Novos usuários concluem tarefas simples rapidamente? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Disponibilidade | O sistema está acessível e funcionando quando os usuários precisam dele? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende | ALTO  |
+| Desempenho | O sistema responde às ações e solicitações rapidamente? | 1 ) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Modificabilidade | É fácil realizar alterações no sistema? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Adaptabilidade | É satisfatória a experiência do usuário em dispositivos diferentes? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Confidencialidade | É mínimo o número de tentativas de acesso não autorizado? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
+| Compatibilidade com navegadores | Todas as funcionalidades são compatíveis com diferentes navegadores? | 1) Atende completamente<BR> 2) Atende parcialmente<BR> 3) Não atende  | ALTO  |
