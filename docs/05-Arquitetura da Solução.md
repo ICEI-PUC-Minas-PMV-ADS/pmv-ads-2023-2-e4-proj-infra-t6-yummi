@@ -6,10 +6,6 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![Arquitetura da Solução](img/Arquitetura%20Yummi.jpeg)
 
-
-
-
-
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
@@ -40,9 +36,23 @@ Neste projeto, optamos por não adotar um esquema relacional devido à natureza 
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Estamos utilizando as seguintes tecnologias e ferramentas para implementar nossa solução:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+**1- Banco de Dados NoSQL:** MongoDB é a tecnologia de banco de dados NoSQL selecionada para armazenar e gerenciar nossos dados, proporcionando flexibilidade na modelagem de dados.
+
+**2 - Desenvolvimento de Aplicativo Móvel:** Estamos utilizando o framework React Native para o desenvolvimento da interface do usuário e lógica de nosso aplicativo móvel, permitindo a criação de aplicativos multiplataforma eficientes.
+
+**3 - Contêinerização:** Utilizamos o Docker para criar contêineres que encapsulam nosso aplicativo e suas dependências, facilitando a implantação e a execução em diferentes ambientes.
+
+**4 - Desenvolvimento Web:** Para desenvolver a interface web da aplicação, empregamos tecnologias como JavaScript, HTML e CSS para criar uma experiência de usuário atraente e interativa.
+
+**5 - Endpoint:** Usamos endpoints para definir os pontos de acesso específicos em nossa API onde as solicitações HTTP podem ser feitas para realizar ações ou acessar recursos específicos.
+
+**6 - Ambiente de Desenvolvimento Integrado (IDE):** A plataforma Visual Studio Community 2019 é nossa escolha para o desenvolvimento de código, oferecendo um ambiente robusto e suporte a várias linguagens de programação.
+
+Essas tecnologias e ferramentas foram selecionadas com base nas necessidades específicas do projeto, visando a eficiência no desenvolvimento, flexibilidade de modelagem de dados e capacidade de escala à medida que o projeto evolui.
+
+## Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 ## Hospedagem
 
