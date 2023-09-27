@@ -56,14 +56,7 @@ Essas tecnologias e ferramentas foram selecionadas com base nas necessidades esp
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Optamos por desenvolver um projeto com acesso exclusivamente local, sem a necessidade de hospedagem em plataformas externas. Essa abordagem simplifica a implementação e manutenção, permitindo-nos adaptar o sistema às especificidades do ambiente operacional, sem depender de recursos externos, garantindo assim, uma solução robusta.
 
 ## Qualidade de Software
 
