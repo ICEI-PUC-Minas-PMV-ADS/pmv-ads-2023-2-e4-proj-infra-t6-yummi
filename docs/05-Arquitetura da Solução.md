@@ -20,11 +20,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+Nesta etapa, não será necessário criar um modelo relacional, pois nossos dados podem ter formatos diferentes. Sendo assim, para este projeto, decidimos utilizar um banco de dados NoSQL em vez de um banco de dados relacional, devido às necessidades específicas do nosso sistema. A flexibilidade de esquema oferecida pelos bancos de dados NoSQL é essencial para lidar com dados variáveis e semiestruturados, permitindo que adaptemos a estrutura dos dados conforme necessário. Além disso, a simplicidade na modelagem de dados e a ausência de um modelo relacional rígido simplificam o desenvolvimento e a manutenção do sistema, permitindo que nosso grupo se concentre na implementação das funcionalidades essenciais do projeto.
 
 ## Esquema Relacional
 
