@@ -4,7 +4,8 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](./docs/img/Arquitetura%20Yummi.jpeg)
+![Arquitetura da Solução](docs/img/Fluxo 3 Yummi.jpg)
+
 
 
 
