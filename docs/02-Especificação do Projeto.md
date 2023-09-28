@@ -83,20 +83,15 @@ Esse processo procura demonstrar as condições atuais como muitas pessoas fazem
 
 ![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.16.33.jpeg)
 
-### Processo 2 – ATENDIMENTO ONLINE EM RESTAURANTES (AS-IS)
-
-Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos online em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento online e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes no atendimento telefônico, perda de tempo do atendente, risco de esquecimento. 
-
-![Processo 2](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
 
 Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo que auxilie clientes e restaurantes na busca de uma solução eficiente e eficaz, que os auxilie de forma rápida e prática na escolha dos cardápios disponíveis, através de uma plataforma digital elaborados dentro da plataforma. 
 
-### Processo 3 – ATENDIMENTO APP YUMMI EM RESTAURANTES (TO-BE)
+### Processo 2 – ATENDIMENTO VIA APP YUMMI EM RESTAURANTES (TO-BE)
 
 Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
 
-![Processo 3](img/Fluxo%203%20Yummi.jpg)
 ![Processo 3](img/Eixo%204%20Yummi%20-%20TO-BE.png)
+
 
 ## Indicadores de Desempenho
 
