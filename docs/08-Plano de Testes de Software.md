@@ -2,7 +2,7 @@
 
 **Objetivo dos testes:** Verificar se o sistema atende aos requisitos funcionais, requisitos não funcionais e respeita as restrições definidas para o projeto.
 
-### Testes de Requisitos Funcionais:
+## Testes de Requisitos Funcionais:
 
 #### RF-001: Listagem de Pratos no Cardápio
 **Objetivo:** Verificar se o sistema exibe corretamente a lista de pratos com descrições e preços.
@@ -113,7 +113,7 @@
 **Critérios de Êxito:** Os usuários podem fazer login com sucesso usando e-mail e senha.
 
 
-### Testes de Requisitos Não Funcionais:
+## Testes de Requisitos Não Funcionais:
 
 #### RNF-001: Compatibilidade com Dispositivos e Navegadores
 **Objetivo:** Verificar se o cardápio digital é compatível com uma variedade de dispositivos e navegadores.
@@ -151,7 +151,7 @@
 
 **Critérios de Êxito:** O sistema mantém o desempenho aceitável durante os picos de tráfego simulados.
 
-### Testes de Restrições:
+## Testes de Restrições:
 
 #### Restrição 01: Compatibilidade de Dispositivos
 **Objetivo:** Verificar se o sistema só pode ser acessado por dispositivos compatíveis.
