@@ -69,16 +69,8 @@
 
 ### Melhorias e Ações Corretivas:
 
-Com base nos resultados dos testes de usabilidade, priorize e implemente as melhorias necessárias no sistema para aprimorar a usabilidade, incluindo aprimoramentos na interface do usuário, fluxos de trabalho e mensagens de ajuda.
+Com base nos resultados dos testes de usabilidade, nosso grupo deve priorizar e implementar as melhorias necessárias no sistema, incluindo aprimoramentos na interface do usuário, fluxos de trabalho e mensagens de ajuda.
 
-Repita os testes de usabilidade após as melhorias para garantir que os problemas tenham sido resolvidos e que a usabilidade do sistema tenha sido aprimorada.
+Os testes de usabilidade devem ser repetidos após a implementação das melhorias para assegurar que os problemas tenham sido resolvidos.
 
-Este plano de testes de usabilidade ajudará a identificar áreas em que o sistema pode ser aprimorado para proporcionar uma melhor experiência aos usuários finais, tornando-o mais eficiente e intuitivo.
-
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
-
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+Este plano de testes de usabilidade nos auxiliará a identificar áreas em que o sistema pode ser aprimorado para proporcionar uma melhor experiência aos usuários finais, tornando-o mais eficiente e intuitivo.
