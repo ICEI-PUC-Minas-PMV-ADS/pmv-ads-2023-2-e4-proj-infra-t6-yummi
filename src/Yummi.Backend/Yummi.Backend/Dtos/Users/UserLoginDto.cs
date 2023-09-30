@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Yummi.Backend.Dtos.Users
+namespace Yummi.Backend.Dtos.Categoria
 {
     public class UserLoginDto
     {

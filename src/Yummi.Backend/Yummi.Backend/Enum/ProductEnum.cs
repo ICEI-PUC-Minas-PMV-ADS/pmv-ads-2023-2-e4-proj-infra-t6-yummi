@@ -24,18 +24,6 @@ namespace Yummi.Backend.Enum
         Churrascaria
     }
 
-    public enum CategoriaPrato
-    {
-        Entradas,
-        PratosPrincipais,
-        Aperitivos,
-        Saladas,
-        Sanduiches,
-        Massas,
-        Pizza,
-        Sopas
-    }
-
     public enum TipoBebida
     {
         Refrigerantes,

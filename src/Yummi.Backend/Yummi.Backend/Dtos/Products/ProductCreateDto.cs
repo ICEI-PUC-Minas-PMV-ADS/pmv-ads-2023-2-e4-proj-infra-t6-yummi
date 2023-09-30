@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Yummi.Backend.Enum;
+using Yummi.Backend.Models;
 
 namespace Yummi.Backend.Dtos.Products
 {
@@ -18,7 +19,7 @@ namespace Yummi.Backend.Dtos.Products
         public TipoCozinha TipoCozinha { get; set; }
 
         [Required]
-        public CategoriaPrato Categoria { get; set; }
+        public Categoria? Categoria { get; set; }
 
         [Required]
         public TipoBebida TipoBebida { get; set; }
