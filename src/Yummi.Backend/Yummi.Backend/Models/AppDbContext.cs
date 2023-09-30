@@ -10,6 +10,7 @@ namespace Yummi.Backend.Models
         }
 
         public DbSet<User> Usuarios { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
 
     }
 }
