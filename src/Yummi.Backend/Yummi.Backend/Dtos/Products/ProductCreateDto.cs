@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Yummi.Backend.Enum;
 
 namespace Yummi.Backend.Dtos.Products
@@ -5,9 +6,9 @@ namespace Yummi.Backend.Dtos.Products
     public class ProductCreateDto
     {
         [Required]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
         [Required]
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
         [Required]
         public decimal Preco { get; set; }        
         [Required]
