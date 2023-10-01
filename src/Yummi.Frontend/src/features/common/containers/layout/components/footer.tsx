@@ -5,7 +5,7 @@ export const Footer = (): JSX.Element => {
 
   return (
     <Layout.Footer className="text-center">
-      TRACTIAN ©{year} Created by Felipe Ferrarini
+      YUMMI ©{year} Created by Yummi Team
     </Layout.Footer>
   );
 };

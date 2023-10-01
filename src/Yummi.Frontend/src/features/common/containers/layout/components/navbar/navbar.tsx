@@ -10,7 +10,7 @@ export const Navbar = (): JSX.Element => {
   if (isMobile) {
     return (
       <Drawer
-        title="TRACTIAN"
+        title="YUMMI"
         placement="left"
         bodyStyle={{ padding: 16 }}
         open={isOpen}
