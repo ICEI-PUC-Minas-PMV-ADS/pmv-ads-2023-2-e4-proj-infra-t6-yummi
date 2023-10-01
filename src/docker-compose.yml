@@ -57,6 +57,10 @@ services:
   yummi.services.frontend:
     image: yummi.services.frontend
     container_name: yummi.services.frontend
+    depends_on:
+      - yummi.services.backend
+    command:
+      - echo "yummi.services.frontend:success!"
     build:
       context: ./Yummi.Frontend/
       dockerfile: ./Dockerfile
