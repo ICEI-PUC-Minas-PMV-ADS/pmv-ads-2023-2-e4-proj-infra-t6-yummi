@@ -64,6 +64,7 @@ try
     builder.Services.Configure<DatabaseConfiguration>(builder.Configuration.GetSection("DatabaseConfiguration"));
 
     builder.Services.AddSingleton<IUserRepository, UserRepository>();
+    builder.Services.AddSingleton<ICategoriaRepository, CategoriaRepository>();
 
     var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWT_Secret"));
 
