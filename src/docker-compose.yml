@@ -54,6 +54,17 @@ services:
     networks:
       - backend
 
+  yummi.services.frontend:
+    image: yummi.services.frontend
+    container_name: yummi.services.frontend
+    build:
+      context: ./Yummi.Frontend/
+      dockerfile: ./Dockerfile
+    ports:
+      - '8080:8080'
+    networks:
+      - backend
+
 networks:
   backend:
     driver: bridge
