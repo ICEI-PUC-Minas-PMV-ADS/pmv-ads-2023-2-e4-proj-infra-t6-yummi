@@ -1,0 +1,23 @@
+{
+  "list-companies": {
+    "title": "Empresas",
+    "add-company": "Adicionar Empresa",
+    "search-for": "Buscar por nome, id ou tag",
+    "delete-confirmation": {
+      "title": "Excluir Empresa",
+      "description": "Tem certeza que deseja excluir a empresa?"
+    },
+    "table": {
+      "name": "Nome",
+      "actions": "Ações",
+      "no-data": "Nenhuma empresa encontrado"
+    }
+  },
+  "company-form": {
+    "create-title": "Nova Empresa",
+    "edit-title": "Editar Empresa",
+    "form": {
+      "name": "Nome"
+    }
+  }
+}

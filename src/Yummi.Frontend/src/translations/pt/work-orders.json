@@ -1,0 +1,42 @@
+{
+  "list-orders": {
+    "title": "Ordens de Serviço",
+    "add-order": "Adicionar Ordem de Serviço",
+    "search-for": "Buscar por nome, id",
+    "delete-confirmation": {
+      "title": "Excluir Ordem de Serviço",
+      "description": "Tem certeza que deseja excluir a Ordem de Serviço?"
+    },
+    "table": {
+      "title": "Titulo",
+      "priority": "Prioridade",
+      "status": "Status",
+      "actions": "Ações",
+      "no-data": "Nenhuma Ordem de Serviço encontrada"
+    }
+  },
+  "form": {
+    "create-title": "Nova Ordem de Serviço",
+    "edit-title": "Editar Ordem de Serviço",
+    "title": "Titulo",
+    "description": "Descrição",
+    "assetId": "Ativo",
+    "assignedUserIds": "Usuários Responsáveis",
+    "priority": "Prioridade",
+    "status": "Status",
+    "checklist": "Tarefas",
+    "add-checklist": "Adicionar Tarefa",
+    "remove-checklist": "Remover Tarefa"
+  },
+  "status": {
+    "completed": "Completo",
+    "in progress": "Em Progresso",
+    "on hold": "Em Espera",
+    "opened": "Em Aberto"
+  },
+  "priority": {
+    "high": "Alta",
+    "medium": "Média",
+    "low": "Baixa"
+  }
+}

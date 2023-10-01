@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "items": {
+      "assets": "Ativos",
+      "companies": "Empresas",
+      "units": "Unidades",
+      "users": "Usuários",
+      "workorders": "Ordens de Serviço",
+      "dashboard": "Dashboard"
+    }
+  },
+  "change-language": "Alterar idioma"
+}

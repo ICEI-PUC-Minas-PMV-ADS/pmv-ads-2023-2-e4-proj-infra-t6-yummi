@@ -1,0 +1,23 @@
+{
+  "list-companies": {
+    "title": "Companies",
+    "add-company": "Add Company",
+    "search-for": "Search by name, id or tag",
+    "delete-confirmation": {
+      "title": "Delete Company",
+      "description": "Are you sure you want to delete the company?"
+    },
+    "table": {
+      "name": "Name",
+      "actions": "Actions",
+      "no-data": "No companies found"
+    }
+  },
+  "company-form": {
+    "create-title": "New Company",
+    "edit-title": "Edit Company",
+    "form": {
+      "name": "Name"
+    }
+  }
+}

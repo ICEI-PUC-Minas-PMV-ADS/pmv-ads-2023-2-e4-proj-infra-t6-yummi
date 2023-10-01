@@ -1,0 +1,22 @@
+{
+  "list-units": {
+    "title": "Unidades",
+    "add-unit": "Adicionar Unidade",
+    "search-for": "Buscar por nome, id",
+    "delete-confirmation": {
+      "title": "Excluir Unidade",
+      "description": "Tem certeza que deseja excluir a Unidade?"
+    },
+    "table": {
+      "name": "Nome",
+      "actions": "Ações",
+      "no-data": "Nenhuma Unidade encontrada"
+    }
+  },
+  "form": {
+    "create-title": "Nova Unidade",
+    "edit-title": "Editar Unidade",
+    "name": "Nome",
+    "companyId": "Empresa"
+  }
+}

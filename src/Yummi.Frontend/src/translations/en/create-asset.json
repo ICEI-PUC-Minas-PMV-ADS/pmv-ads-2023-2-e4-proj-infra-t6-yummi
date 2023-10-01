@@ -1,0 +1,15 @@
+{
+  "title": "New Asset",
+  "edit-title": "Edit Asset",
+  "form": {
+    "model": "Model",
+    "name": "Name",
+    "maxTemp": "Maximum Temperature (°C)",
+    "power": "Power (kWh)",
+    "rpm": "Rotation (rpm)",
+    "status": "Status",
+    "unitId": "Responsible Unit",
+    "assignedUserIds": "Assigned Users",
+    "companyId": "Company"
+  }
+}
