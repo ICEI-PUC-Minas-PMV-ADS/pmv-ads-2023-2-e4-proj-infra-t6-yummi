@@ -61,6 +61,8 @@ services:
       - yummi.services.backend
     command:
       - echo "yummi.services.frontend:success!"
+    environment:
+      - VITE_API_URL=https://my-json-server.typicode.com/tractian/fake-api
     build:
       context: ./Yummi.Frontend/
       dockerfile: ./Dockerfile
