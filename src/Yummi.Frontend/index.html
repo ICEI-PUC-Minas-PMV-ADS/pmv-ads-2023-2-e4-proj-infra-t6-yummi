@@ -1,13 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yummi</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/Yummi.Frontend/admin-styles.css">
+    <title>Yummi - Admin</title>
+</head>
+
+<body>
+    <header class="header-content">
+        <h1>Yummi - Admin</h1>
+        <p>Visão do Administrador</p>
+    </header>
+
+    <div class="admin-view">
+        <h2>Pedidos Pendentes</h2>
+        <div class="order-list">
+            <!-- Exibir pedidos pendentes aqui -->
+            <div class="order">
+                <h3>Pedido #1</h3>
+                <div class="order-details">
+                    <p>Itens: Prato Feito, Feijão Tropeiro</p>
+                    <p>Total: R$ 73,00</p>
+                </div>
+                <button class="order-button prepare-order">Preparar Pedido</button>
+            </div>
+            <div class="order">
+                <h3>Pedido #2</h3>
+                <div class="order-details">
+                    <p>Itens: Feijoada, Porção de Pastéis</p>
+                    <p>Total: R$ 85,00</p>
+                </div>
+                <button class="order-button prepare-order">Preparar Pedido</button>
+            </div>
+            <!-- Adicione mais pedidos pendentes aqui -->
+        </div>
+    </div>
+    <script src="/src/Yummi.Frontend/admin-script.js"></script>
+</body>
+
 </html>
