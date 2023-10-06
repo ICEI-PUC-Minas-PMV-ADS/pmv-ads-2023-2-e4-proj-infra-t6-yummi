@@ -91,6 +91,9 @@ namespace Yummi.Backend.Controllers
         public async Task<ActionResult<User>> GetUser(string id)
         {
             var userResult = await _userRepository.GetUserByIdAsync(id);
+
+            if (userResult == null)
+                return NotFound("Esse usuário não foi encontrado!");
             return Ok(userResult);
         }
 
@@ -108,7 +111,7 @@ namespace Yummi.Backend.Controllers
                 var user = new User
                 {
                     Id = id,
-                    Email = userUpdateDto.Email,
+                    Login = userUpdateDto.Login,
                     Name = userUpdateDto.Name,
                     Password = userUpdateDto.Password
                 };
