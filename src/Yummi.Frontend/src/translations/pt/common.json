@@ -1,0 +1,9 @@
+{
+  "asset-status": {
+    "inAlert": "Em alerta",
+    "inDowntime": "Inativo",
+    "inOperation": "Em operação",
+    "plannedStop": "Parada planejada",
+    "unplannedStop": "Parada não planejada"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "list-users": {
+    "title": "Usuários",
+    "add-user": "Adicionar Usuário",
+    "search-for": "Buscar por nome, id",
+    "delete-confirmation": {
+      "title": "Excluir Usuário",
+      "description": "Tem certeza que deseja excluir o Usuário?"
+    },
+    "table": {
+      "name": "Nome",
+      "email": "E-mail",
+      "actions": "Ações",
+      "no-data": "Nenhuma Usuário encontrado"
+    }
+  },
+  "form": {
+    "create-title": "Novo Usuário",
+    "edit-title": "Editar Usuário",
+    "name": "Nome",
+    "email": "E-mail",
+    "companyId": "Empresa",
+    "unitId": "Unidade"
+  }
+}

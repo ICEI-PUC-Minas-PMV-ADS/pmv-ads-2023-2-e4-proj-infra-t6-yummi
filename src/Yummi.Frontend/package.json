@@ -1,0 +1,52 @@
+{
+  "name": "yummi-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.5",
+    "@fontsource-variable/inter": "^5.0.8",
+    "@hookform/resolvers": "^3.2.0",
+    "@tanstack/react-query": "^4.32.6",
+    "antd": "^5.8.2",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "highcharts": "^11.1.0",
+    "highcharts-react-official": "^3.2.0",
+    "i18next": "^23.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-i18next": "^13.1.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.15.0",
+    "yup": "^1.2.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.5.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

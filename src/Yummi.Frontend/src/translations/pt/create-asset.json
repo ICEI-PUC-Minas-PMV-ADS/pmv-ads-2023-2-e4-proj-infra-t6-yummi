@@ -1,0 +1,15 @@
+{
+  "title": "Novo Ativo",
+  "edit-title": "Editar Ativo",
+  "form": {
+    "model": "Modelo",
+    "name": "Nome",
+    "maxTemp": "Temperatura Máxima (°C)",
+    "power": "Potência (kWh)",
+    "rpm": "Rotação (rpm)",
+    "status": "Status",
+    "unitId": "Unidade Responsáveis",
+    "assignedUserIds": "Usuários Responsáveis",
+    "companyId": "Empresa"
+  }
+}

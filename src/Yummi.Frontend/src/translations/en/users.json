@@ -1,0 +1,25 @@
+{
+  "list-users": {
+    "title": "Users",
+    "add-user": "Add User",
+    "search-for": "Search by name, id",
+    "delete-confirmation": {
+      "title": "Delete User",
+      "description": "Are you sure you want to delete the User?"
+    },
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "actions": "Actions",
+      "no-data": "No User Found"
+    }
+  },
+  "form": {
+    "create-title": "New User",
+    "edit-title": "Edit User",
+    "name": "Name",
+    "email": "Email",
+    "companyId": "Company",
+    "unitId": "Unit"
+  }
+}

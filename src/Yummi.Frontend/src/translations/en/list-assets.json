@@ -1,0 +1,16 @@
+{
+  "title": "Assets",
+  "add-asset": "Add Asset",
+  "search-for": "Search by name, id or tag",
+  "delete-confirmation": {
+    "title": "Delete Asset",
+    "description": "Are you sure you want to delete the asset?"
+  },
+  "table": {
+    "name": "Name",
+    "status": "Status",
+    "healthscore": "Health (%)",
+    "actions": "Actions",
+    "no-data": "No assets found"
+  }
+}

@@ -75,27 +75,23 @@ Atualmente diversas empresas (restaurantes) vem adotando o uso de cardápios dig
 
 ### Descrição Geral da Proposta
 
-Pensando nisso foi desenvolvido o projeto do aplicativo “Yummi”, que busca justamente auxiliar seus usuários na busca de restaurantes e na escolha dos cardápios disponíveis. É uma ferramenta que possibilita a seus usuários escolherem os pratos de suas preferências, fazerem reservas de mesas, não dependerem de disponibilidade de garçons, terem seus pedidos feitos diretamente na cozinha e poderem fazer o pagamento sem fila de espera no caixa. 
+Pensando nisso foi desenvolvido o projeto do aplicativo “Yummi”, que busca justamente auxiliar seus usuários na busca de restaurantes e na escolha dos cardápios disponíveis. É uma ferramenta que possibilita a seus usuários escolherem os pratos de suas preferências, não dependerem de disponibilidade de garçons, terem seus pedidos feitos diretamente na cozinha e poderem fazer o pagamento sem fila de espera no caixa. 
 
 ### Processo 1 – ATENDIMENTO PRESENCIAL EM RESTAURANTES (AS-IS)
 
-Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos presencialmente em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento presencial e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes por mesa, garçom sobrecarregado, desvio de função, risco de esquecimento, favorecimento aos clientes. 
+Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos presencialmente em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento presencial e consequentemente refletem no atendimento aos clientes, como por exemplo: garçom sobrecarregado, desvio de função, risco de esquecimento, favorecimento aos clientes. 
 
 ![Processo 1](img/WhatsApp%20Image%202023-08-31%20at%2016.16.33.jpeg)
 
-### Processo 2 – ATENDIMENTO ONLINE EM RESTAURANTES (AS-IS)
-
-Esse processo procura demonstrar as condições atuais como muitas pessoas fazem seus pedidos online em restaurantes. Foram identificados no fluxo abaixo alguns problemas que impactam nos serviços de atendimento online e consequentemente refletem no atendimento aos clientes, como por exemplo: Espera de clientes no atendimento telefônico, perda de tempo do atendente, risco de esquecimento. 
-
-![Processo 2](img/WhatsApp%20Image%202023-08-31%20at%2016.39.20.jpeg)
 
 Diante desse cenário vislumbrou-se a possibilidade de desenvolver um aplicativo que auxilie clientes e restaurantes na busca de uma solução eficiente e eficaz, que os auxilie de forma rápida e prática na escolha dos cardápios disponíveis, através de uma plataforma digital elaborados dentro da plataforma. 
 
-### Processo 3 – ATENDIMENTO APP YUMMI EM RESTAURANTES (TO-BE)
+### Processo 2 – ATENDIMENTO VIA APP YUMMI EM RESTAURANTES (TO-BE)
 
-Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos, reserva de mesas e atendimento ao cliente. 
+Esse processo procura demonstrar as condições propostas a esses possíveis usuários (clientes e restaurantes), para que possam utilizar o aplicativo “Yummi”, o qual oferece cardápios digitais de forma simples e prática, de forma a suprir as necessidades e desejos dos usuários do sistema, auxiliando-os no controle de pedidos e atendimento ao cliente. 
 
-![Processo 3](img/Fluxo%203%20Yummi.jpg)
+![Processo 3](img/Eixo%204%20Yummi%20-%20TO-BE.png)
+
 
 ## Indicadores de Desempenho
 
@@ -125,12 +121,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005|O sistema deve possibilitar que os clientes adicionem itens do cardápio ao carrinho de compras para fazer um pedido diretamente através do aplicativo   | ALTA |
 |RF-006|O sistema deve permitir que os restaurantes criem contas personalizadas com informações como nome, e-mail e senha   | ALTA |
 |RF-007|O sistema deve permitir que os clientes visualizem o resumo de seus pedidos antes de finalizar  | ALTA |
-|RF-008|O sistema deve permitir que os clientes sejam capazes de escanear o QR code facilmente usando seus smartphones para acessar o cardápio digital | ALTA |
-|RF-009|O sistema deve permitir que a equipe do restaurante receba os pedidos dos clientes em tempo real  | ALTA |
-|RF-010|O sistema deve permitir os clientes sejam capazes de fazer pedidos especiais ou adicionais, como ingredientes extras, sem cebola, molhos do lado, etc | MÉDIA |
-|RF-011|O sistema deve incluir instruções claras ao lado do QR code para orientar os clientes sobre como escaneá-lo corretamente  | ALTA |
-|RF-012|O sistema deve permitir que os usuários façam login usando e-mail e senha.  | ALTA |
-|RF-013|O sistema deve garantir que, após o escaneamento bem-sucedido, os clientes sejam redirecionados automaticamente para a interface do cardápio digital, sem a necessidade de ações adicionais| MÉDIA |
+|RF-008|O sistema deve permitir que a equipe do restaurante receba os pedidos dos clientes em tempo real  | ALTA |
+|RF-009|O sistema deve permitir os clientes sejam capazes de fazer pedidos especiais ou adicionais, como ingredientes extras, sem cebola, molhos do lado, etc | MÉDIA |
+|RF-010|O sistema deve incluir instruções claras para orientar os clientes sobre como utilizar o cardápio digital corretamente  | ALTA |
+|RF-011|O sistema deve permitir que os usuários façam login usando e-mail e senha.  | ALTA |
 
 
 
@@ -164,6 +158,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
 ![Diagrama de Caso de Uso](./img/diagrama_caso_uso.png)
+
+###Adicionar caso de uso Garçom.
 
 # Matriz de Rastreabilidade
 
@@ -199,4 +195,4 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+![Orçamento](img/Orçamento-Yummi.jpeg)

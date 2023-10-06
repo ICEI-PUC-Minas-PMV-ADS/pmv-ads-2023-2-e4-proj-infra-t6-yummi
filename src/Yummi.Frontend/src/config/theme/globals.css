@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+  * {
+    @apply m-0 box-border scroll-smooth p-0 font-sans antialiased;
+  }
+
+  body,
+  html {
+    @apply overflow-x-hidden;
+  }
+}

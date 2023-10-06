@@ -54,6 +54,23 @@ services:
     networks:
       - backend
 
+  yummi.services.frontend:
+    image: yummi.services.frontend
+    container_name: yummi.services.frontend
+    depends_on:
+      - yummi.services.backend
+    command:
+      - echo "yummi.services.frontend:success!"
+    environment:
+      - VITE_API_URL=https://my-json-server.typicode.com/tractian/fake-api
+    build:
+      context: ./Yummi.Frontend/
+      dockerfile: ./Dockerfile
+    ports:
+      - '8080:8080'
+    networks:
+      - backend
+
 networks:
   backend:
     driver: bridge

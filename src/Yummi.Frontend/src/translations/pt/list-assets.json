@@ -1,0 +1,16 @@
+{
+  "title": "Ativos",
+  "add-asset": "Adicionar Ativo",
+  "search-for": "Buscar por nome, id ou tag",
+  "delete-confirmation": {
+    "title": "Excluir Ativo",
+    "description": "Tem certeza que deseja excluir o ativo?"
+  },
+  "table": {
+    "name": "Nome",
+    "status": "Status",
+    "healthscore": "Saúde (%)",
+    "actions": "Ações",
+    "no-data": "Nenhum ativo encontrado"
+  }
+}
