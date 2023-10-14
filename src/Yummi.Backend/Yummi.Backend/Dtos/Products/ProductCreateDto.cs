@@ -7,9 +7,9 @@ namespace Yummi.Backend.Dtos.Products
     public class ProductCreateDto
     {
         [Required]
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
         [Required]
-        public string? Descricao { get; set; }
+        public string Descricao { get; set; }
         [Required]
         public decimal Preco { get; set; }        
         [Required]
@@ -19,7 +19,7 @@ namespace Yummi.Backend.Dtos.Products
         public TipoCozinha TipoCozinha { get; set; }
 
         [Required]
-        public Models.Categoria? Categoria { get; set; }
+        public Models.Categoria Categoria { get; set; }
 
         [Required]
         public TipoBebida TipoBebida { get; set; }
