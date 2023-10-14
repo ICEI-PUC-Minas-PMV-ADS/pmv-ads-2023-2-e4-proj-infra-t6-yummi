@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using Yummi.Backend.Dtos.Products
+using Yummi.Backend.Dtos.Products;
+
+
 
 namespace Yummi.Backend.Controllers
 {
@@ -23,7 +23,7 @@ namespace Yummi.Backend.Controllers
         [HttpGet("{id}")]
         public ActionResult<ProductCreateDto> GetProduct(int id)
         {
-            var product = products.Find(p => p.Nome == id);
+            var product = products.Find(p => p.Id == id);
             if (product == null)
             {
                 return NotFound();
@@ -57,8 +57,8 @@ namespace Yummi.Backend.Controllers
             }
 
             // Atualize os campos do produto existente com os valores do produto atualizado.
-            existingProduct.Name = updatedProduct.Name;
-            existingProduct.Price = updatedProduct.Price;
+            existingProduct.Nome = updatedProduct.Nome;
+            existingProduct.Preco = updatedProduct.Preco;
 
             return NoContent();
         }

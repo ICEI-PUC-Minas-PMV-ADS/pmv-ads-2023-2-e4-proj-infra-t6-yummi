@@ -7,6 +7,8 @@ namespace Yummi.Backend.Dtos.Products
     public class ProductCreateDto
     {
         [Required]
+        public int Id { get; set; }
+        [Required]
         public string Nome { get; set; }
         [Required]
         public string Descricao { get; set; }
