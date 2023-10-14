@@ -1,0 +1,29 @@
+@model List<Yummi.Backend.Models.Pedido>
+
+  @{
+    ViewData["Title"] = "Listagem de Pedidos";
+  }
+
+  <h2>Listagem de Pedidos</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Data do Pedido</th>
+        <!-- Adicione colunas adicionais conforme necessário -->
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var pedido in Model)
+        {
+      <tr>
+        <td>@pedido.Id</td>
+        <td>@pedido.Descricao</td>
+        <td>@pedido.DataPedido</td>
+        <!-- Adicione colunas adicionais conforme necessário -->
+      </tr>
+        }
+    </tbody>
+  </table>
