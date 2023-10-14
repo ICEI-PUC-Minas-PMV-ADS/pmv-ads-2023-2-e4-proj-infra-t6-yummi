@@ -1,14 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\Yummi.Backend",
-    "\\src\\Yummi.Backend\\Yummi.Backend",
-    "\\src\\Yummi.Backend\\Yummi.Backend\\Controllers",
-    "\\src\\Yummi.Backend\\Yummi.Backend\\Data",
-    "\\src\\Yummi.Backend\\Yummi.Backend\\Dtos",
-    "\\src\\Yummi.Backend\\Yummi.Backend\\Dtos\\Products"
+    "\\src\\Yummi.Backend\\Yummi.Backend"
   ],
-  "SelectedNode": "\\src\\Yummi.Backend\\Yummi.Backend\\Dtos\\Products\\ProductCreateDto.cs",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
