@@ -2,9 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\Yummi.Backend",
+    "\\src\\Yummi.Backend\\Yummi.Backend",
+    "\\src\\Yummi.Backend\\Yummi.Backend\\Controllers",
+    "\\src\\Yummi.Backend\\Yummi.Backend\\Dtos",
+    "\\src\\Yummi.Backend\\Yummi.Backend\\Dtos\\Products",
     "\\src\\Yummi.Frontend",
     "\\src\\Yummi.Frontend\\Views",
-    "\\src\\Yummi.Frontend\\Views\\Categoria"
+    "\\src\\Yummi.Frontend\\Views\\User"
   ],
+  "SelectedNode": "\\src\\Yummi.Frontend\\Views\\User\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }
