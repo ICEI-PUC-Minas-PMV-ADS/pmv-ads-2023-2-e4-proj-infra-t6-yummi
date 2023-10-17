@@ -52,7 +52,6 @@ Estamos utilizando as seguintes tecnologias e ferramentas para implementar nossa
 
 Essas tecnologias e ferramentas foram selecionadas com base nas necessidades específicas do projeto, visando a eficiência no desenvolvimento, flexibilidade de modelagem de dados e capacidade de escala à medida que o projeto evolui.
 
-## Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 ## Hospedagem
 
