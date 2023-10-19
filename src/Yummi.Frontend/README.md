@@ -23,7 +23,7 @@
 2. Run the following command to install the necessary dependencies:
 
 ```bash
-yarn install
+npm install
 ```
 
 ### Running the Application
@@ -31,7 +31,7 @@ yarn install
 3. Start the application with the following command:
 
 ```bash
-yarn dev
+npx vite --port 3000
 ```
 
 Access [http://localhost:3000](http://localhost:3000) in your browser to see the project in action.
