@@ -1,7 +1,6 @@
 import { TableActions } from '@/components/data-display';
 import { IAsset } from '@/features/assets/entities';
-import { mapStatusToColor } from '@/features/assets/utils';
-import { Progress, Table, Tag } from 'antd';
+import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
@@ -29,28 +28,10 @@ export const ListAssetsTable = ({
       responsive: ['sm']
     },
     {
-      title: t('table.name'),
+      title: t('Produto'),
       dataIndex: 'name',
       key: 'name',
       render: (name, record) => <Link to={`${record.id}`}>{name}</Link>
-    },
-    {
-      title: t('table.status'),
-      dataIndex: 'status',
-      key: 'status',
-      render: (status: string) => (
-        <Tag color={mapStatusToColor(status)}>
-          {t(`common:asset-status.${status}`)}
-        </Tag>
-      ),
-      responsive: ['sm']
-    },
-    {
-      title: t('table.healthscore'),
-      dataIndex: 'healthscore',
-      key: 'healthscore',
-      render: value => <Progress percent={value} size="small" steps={20} />,
-      responsive: ['md']
     },
     {
       title: t('table.actions'),

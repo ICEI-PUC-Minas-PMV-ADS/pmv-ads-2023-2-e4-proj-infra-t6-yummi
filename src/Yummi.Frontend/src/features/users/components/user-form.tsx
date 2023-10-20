@@ -1,8 +1,6 @@
 import { FormItem } from '@/components/form';
-import { useListCompanies } from '@/features/companies/services';
-import { useListUnits } from '@/features/units/services';
 import { CreateUserDto } from '@/features/users/services';
-import { Button, Form, Input, Select, Space } from 'antd';
+import { Button, Form, Input, Space } from 'antd';
 import { Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -20,8 +18,6 @@ export const UserForm = ({
   isSubmitting
 }: Props) => {
   const { t } = useTranslation('users');
-  const { data: companies } = useListCompanies();
-  const { data: units } = useListUnits();
 
   return (
     <Form
@@ -49,28 +45,26 @@ export const UserForm = ({
 
       <FormItem<CreateUserDto>
         control={control}
-        label={t('form.companyId')}
-        name="companyId"
+        label={t('Senha')}
+        name="password"
         required
       >
-        <Select
-          placeholder={t('dictionary:select')}
-          allowClear
-          options={units?.map(c => ({ value: c.id, label: c.name }))}
-        />
+      <Input.Password
+        name="password"
+        required
+      />
       </FormItem>
 
       <FormItem<CreateUserDto>
         control={control}
-        label={t('form.unitId')}
-        name="unitId"
+        label={t('Confirme sua senha')}
+        name="confirmPassword"
         required
       >
-        <Select
-          placeholder={t('dictionary:select')}
-          allowClear
-          options={companies?.map(u => ({ value: u.id, label: u.name }))}
-        />
+      <Input.Password
+        name="confirmPassword"
+        required
+      />
       </FormItem>
 
       <Space className="w-full justify-end">

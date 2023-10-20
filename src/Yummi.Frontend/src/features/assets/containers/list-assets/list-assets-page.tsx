@@ -19,11 +19,11 @@ export const Component = () => {
     <Card className="w-full">
       <Space direction="vertical" className="w-full" size={24}>
         <PageHeader
-          title={t('title')}
+          title={t('Produtos Cadastrados')}
           actions={
             <Link to="create">
               <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
-                {t('add-asset')}
+                {t('Adicionar Produto')}
               </Button>
             </Link>
           }

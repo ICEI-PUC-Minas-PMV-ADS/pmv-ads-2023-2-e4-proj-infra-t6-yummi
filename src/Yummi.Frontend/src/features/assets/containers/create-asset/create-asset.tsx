@@ -13,7 +13,7 @@ export const Component = (): JSX.Element => {
   return (
     <Card className="mx-auto">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('title')} backButtonLink="/assets" />
+        <PageHeader title={t('Cadastrar Produto')} backButtonLink="/assets" />
         <AssetForm
           handleSubmit={handleSubmit}
           onCancel={() => navigate('/assets')}
