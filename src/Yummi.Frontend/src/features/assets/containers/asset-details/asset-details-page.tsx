@@ -5,7 +5,7 @@ import { useGetAsset } from '@/features/assets/services';
 import { Space } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 import { NotFoundState } from '../../components';
-import { DetailsCard, PageActions, StatusCard } from './components';
+import { DetailsCard, PageActions } from './components';
 
 export const Component = (): JSX.Element => {
   const { id = '0' } = useParams();
@@ -35,7 +35,6 @@ export const Component = (): JSX.Element => {
 
       <div className="flex flex-col items-start gap-4 md:flex-row">
         <DetailsCard asset={data} />
-        <StatusCard asset={data} />
       </div>
       {deleteModal}
     </Space>

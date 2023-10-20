@@ -4,14 +4,14 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { assetSchema } from '../schemas';
-import { createAsset } from '../services';
+import { CreateAssetDto, createAsset } from '../services';
 
 export const useCreateAsset = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const queryClient = useQueryClient();
 
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, control } = useForm<CreateAssetDto>({
     resolver: yupResolver(assetSchema(t))
   });
 

@@ -27,7 +27,7 @@ export const Component = (): JSX.Element | null => {
     <Card className="mx-auto w-full max-w-2xl">
       <Space className="w-full" direction="vertical" size={24}>
         <PageHeader
-          title={t('form.edit-title')}
+          title={t('Atualizar Pedido')}
           backButtonLink={`/workorders`}
         />
         <WorkOrderForm

@@ -26,7 +26,7 @@ export const Component = (): JSX.Element => {
   return (
     <Card className="mx-auto">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('edit-title')} backButtonLink={`/assets/${id}`} />
+        <PageHeader title={t('Editar Produto')} backButtonLink={`/assets/${id}`} />
         <AssetForm
           handleSubmit={handleSubmit}
           onCancel={() => navigate('/assets')}

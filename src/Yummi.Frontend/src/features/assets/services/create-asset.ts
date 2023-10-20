@@ -1,41 +1,25 @@
 import { httpClient } from '@/config/libs';
-import {
-  IAsset,
-  IAssetSpecifications,
-  StatusEnum
-} from '@/features/assets/entities';
+import { IAsset } from '@/features/assets/entities';
 
 export type CreateAssetDto = {
-  model: string;
   name: string;
-  maxTemp?: number | null;
-  power?: number | null;
-  rpm?: number | null;
-  status: StatusEnum;
-  unitId: number;
-  assignedUserIds: number[];
-  companyId: number;
+  category: string;
+  description: string;
+  price: number;
+  image: string;
 };
 
-export const mapPayloadToAsset = (payload: CreateAssetDto) => {
-  const { maxTemp, power, rpm } = payload;
-
-  const specifications: IAssetSpecifications = {
-    maxTemp,
-    power,
-    rpm
-  };
-
+export const mapAssetToPayload = (asset: IAsset): CreateAssetDto => {
   return {
-    ...payload,
-    specifications
+    name: asset.name,
+    category: asset.category,
+    description: asset.description,
+    price: asset.price,
+    image: asset.image,
   };
 };
 
 export const createAsset = async (payload: CreateAssetDto): Promise<IAsset> => {
-  const { data } = await httpClient.post<IAsset>(
-    '/assets',
-    mapPayloadToAsset(payload)
-  );
+  const { data } = await httpClient.post<IAsset>('/assets', payload);
   return data;
 };

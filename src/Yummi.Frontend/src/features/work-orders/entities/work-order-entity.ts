@@ -5,7 +5,6 @@ export interface IWorkOrder {
   title: string;
   description: string;
   checklist: IWorkOrderCheckList[];
-  priority: WorkOrderPriority;
   status: OrderStatus;
 }
 

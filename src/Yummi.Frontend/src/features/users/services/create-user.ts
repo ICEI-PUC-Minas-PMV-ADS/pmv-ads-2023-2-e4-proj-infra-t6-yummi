@@ -3,9 +3,9 @@ import { IUser } from '../entities';
 
 export type CreateUserDto = {
   name: string;
-  companyId: number;
-  unitId: number;
   email: string;
+  password: string;
+  confirmPassword: string;
 };
 
 export const createUser = async (payload: CreateUserDto): Promise<IUser> => {

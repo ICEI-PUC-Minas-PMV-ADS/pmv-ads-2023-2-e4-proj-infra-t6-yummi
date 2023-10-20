@@ -1,21 +1,26 @@
-import { IAsset } from '@/features/assets/entities';
-import { Card, Image, Skeleton, Space, Tag, Typography } from 'antd';
+import { Card, Image, Skeleton, Space, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { IAsset, StatusEnum } from '@/features/assets/entities';
 
 type Props = {
   asset: IAsset;
 };
 
 export const DetailsCard = ({ asset }: Props): JSX.Element => {
-  const { image, model, sensors, specifications } = asset;
-  const { t } = useTranslation('assetDetails', { keyPrefix: 'details-card' });
+  const { image, category, name, description, price } = asset;
+  const { t } = useTranslation('assetDetails', { keyPrefix: '' });
+
+  const cardStyle = {
+    width: '900px',
+    margin: '0 auto',
+  };
 
   return (
-    <Card title={t('title')} className="w-full md:w-max">
+    <Card title={t('Detalhes do Produto')} style={cardStyle} className="w-full md:w-max">
       <Space direction="vertical" className="w-full">
-        <div className="h-full max-h-[300px] w-full max-w-[400px] overflow-hidden rounded-lg">
+        <div className="h-full max-h-[400px] w-full max-w-[500px] overflow-hidden rounded-lg">
           <Image
-            src={image}
+            src={image} 
             placeholder={
               <Skeleton.Image
                 active
@@ -27,22 +32,19 @@ export const DetailsCard = ({ asset }: Props): JSX.Element => {
         </div>
         <Space direction="vertical">
           <Typography.Text>
-            <strong>{t('model')}:</strong> {model}
-          </Typography.Text>
-          <Space>
-            <Typography.Text strong>{t('sensors')}:</Typography.Text>
-            {sensors.map(sensor => (
-              <Tag key={sensor}>{sensor}</Tag>
-            ))}
-          </Space>
-          <Typography.Text>
-            <strong>{t('maxTemp')}:</strong> {specifications.maxTemp || '-'}
+            <strong>{t('Categoria')}:</strong> {category}
           </Typography.Text>
           <Typography.Text>
-            <strong>{t('power')}:</strong> {specifications.power || '-'}
+            <strong>{t('Produto')}:</strong> {name}
           </Typography.Text>
           <Typography.Text>
-            <strong>{t('rpm')}:</strong> {specifications.rpm || '-'}
+            <strong>{t('Descrição')}:</strong> {description}
+          </Typography.Text>
+          <Typography.Text>
+            <strong>{t('Preço')}:</strong> {price}
+          </Typography.Text>
+          <Typography.Text>
+            <strong>{t('Status')}:</strong> {StatusEnum[asset.status]}
           </Typography.Text>
         </Space>
       </Space>

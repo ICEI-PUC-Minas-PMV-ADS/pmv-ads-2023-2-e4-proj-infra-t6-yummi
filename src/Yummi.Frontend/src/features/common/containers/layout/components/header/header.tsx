@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => {
           )}
 
           <Typography.Title level={4} className="!text-white">
-            YUMMI
+            YUMMI - Administrador
           </Typography.Title>
         </Space>
         <Space>

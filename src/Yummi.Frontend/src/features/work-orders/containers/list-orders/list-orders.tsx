@@ -9,7 +9,7 @@ import { useListWorkOrders } from '../../services';
 import { ListOrdersTable } from './components';
 
 export const Component = () => {
-  const { t } = useTranslation('workOrders', { keyPrefix: 'list-orders' });
+  const { t } = useTranslation('workOrders');
   const [search, setSearch] = useState('');
 
   const { data = [], isLoading } = useListWorkOrders(search);
@@ -19,11 +19,11 @@ export const Component = () => {
     <Card className="w-full">
       <Space direction="vertical" className="w-full" size={24}>
         <PageHeader
-          title={t('title')}
+          title={t('Pedidos')}
           actions={
             <Link to="create">
               <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
-                {t('add-order')}
+                {t('Adicionar Pedido')}
               </Button>
             </Link>
           }

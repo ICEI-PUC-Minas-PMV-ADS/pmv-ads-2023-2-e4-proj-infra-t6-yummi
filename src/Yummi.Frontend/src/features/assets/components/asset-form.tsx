@@ -1,9 +1,5 @@
 import { FormItem } from '@/components/form';
-import { StatusEnum } from '@/features/assets/entities';
 import { CreateAssetDto } from '@/features/assets/services';
-import { useListCompanies } from '@/features/companies/services';
-import { useListUnits } from '@/features/units/services';
-import { useListUsers } from '@/features/users/services';
 import { Button, Form, Input, InputNumber, Select, Space } from 'antd';
 import { Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -24,9 +20,6 @@ export const AssetForm = ({
   initialValues
 }: Props) => {
   const { t } = useTranslation('createAsset');
-  const { data: users } = useListUsers();
-  const { data: units } = useListUnits();
-  const { data: companies } = useListCompanies();
 
   return (
     <Form
@@ -37,7 +30,7 @@ export const AssetForm = ({
     >
       <FormItem<CreateAssetDto>
         control={control}
-        label={t('form.name')}
+        label={t('Produto')}
         name="name"
         required
       >
@@ -46,49 +39,22 @@ export const AssetForm = ({
 
       <FormItem<CreateAssetDto>
         control={control}
-        label={t('form.model')}
-        name="model"
+        label={t('Categoria')}
+        name="category"
         required
       >
-        <Input />
-      </FormItem>
-
-      <Form.Item className="m-0 w-full">
-        <div className="flex w-full flex-col gap-0 md:flex-row md:gap-5">
-          <FormItem<CreateAssetDto>
-            control={control}
-            label={t('form.maxTemp')}
-            name="maxTemp"
-          >
-            <InputNumber min={0} className="w-full" />
-          </FormItem>
-          <FormItem<CreateAssetDto>
-            control={control}
-            label={t('form.power')}
-            name="power"
-          >
-            <InputNumber min={0} className="w-full" />
-          </FormItem>
-          <FormItem<CreateAssetDto>
-            control={control}
-            label={t('form.rpm')}
-            name="rpm"
-          >
-            <InputNumber min={0} className="w-full" />
-          </FormItem>
-        </div>
-      </Form.Item>
-
-      <FormItem<CreateAssetDto>
-        control={control}
-        label={t('form.status')}
-        name="status"
-        required
-      >
-        <Select placeholder={t('dictionary:select')} allowClear>
-          {Object.values(StatusEnum).map(status => (
-            <Select.Option key={status} value={status}>
-              {t(`common:asset-status.${status}`)}
+        <Select
+          placeholder={t('dictionary:select')}
+          allowClear
+        >
+          {[
+            'Entradas',
+            'Pratos Principais',
+            'Drinks e Bebidas',
+            'Sobremesas'
+          ].map(category => (
+            <Select.Option key={category} value={category}>
+              {category}
             </Select.Option>
           ))}
         </Select>
@@ -96,42 +62,29 @@ export const AssetForm = ({
 
       <FormItem<CreateAssetDto>
         control={control}
-        label={t('form.companyId')}
-        name="companyId"
+        label={t('Descrição')}
+        name="description"
         required
       >
-        <Select
-          placeholder={t('dictionary:select')}
-          allowClear
-          options={companies?.map(c => ({ value: c.id, label: c.name }))}
-        />
+        <Input.TextArea />
       </FormItem>
 
       <FormItem<CreateAssetDto>
         control={control}
-        label={t('form.unitId')}
-        name="unitId"
+        label={t('Preço')}
+        name="price"
         required
       >
-        <Select
-          placeholder={t('dictionary:select')}
-          allowClear
-          options={units?.map(u => ({ value: u.id, label: u.name }))}
-        />
+        <InputNumber min={0} className="w-full" />
       </FormItem>
 
       <FormItem<CreateAssetDto>
         control={control}
-        label={t('form.assignedUserIds')}
-        name="assignedUserIds"
+        label={t('Imagem')}
+        name="image"
         required
       >
-        <Select
-          mode="multiple"
-          placeholder={t('dictionary:select')}
-          allowClear
-          options={users?.map(u => ({ value: u.id, label: u.name }))}
-        />
+        <Input type="image" />
       </FormItem>
 
       <Space className="w-full justify-end">
