@@ -1,6 +1,5 @@
 {
-  "reports": "Relatórios",
-  "work-orders": "Ordens de Serviço",
-  "assets": "Ativos",
+  "work-orders": "Pedidos",
+  "assets": "Produtos",
   "create-vs-completed": "Criadas vs Concluídas"
 }
