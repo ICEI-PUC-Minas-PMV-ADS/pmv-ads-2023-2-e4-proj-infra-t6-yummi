@@ -1,23 +1,15 @@
 {
   "not-found": {
-    "title": "Ativo não encontrado",
-    "message": "O ativo que você está procurando não existe ou foi removido.",
-    "action": "Voltar para a lista de ativos"
+    "title": "Produto não encontrado",
+    "message": "O produto que você está procurando não existe ou foi removido.",
+    "action": "Voltar para a lista de produtos"
   },
   "details-card": {
-    "title": "Detalhes",
-    "model": "Modelo",
-    "sensors": "Sensores",
-    "maxTemp": "Temperatura Máxima (°C)",
-    "power": "Potência (kWh)",
-    "rpm": "Rotação (rpm)"
-  },
-  "status-card": {
-    "title": "Status",
-    "totalCollectsUptime": "Total de aferições",
-    "totalUptime": "Total de Horas ativo",
-    "lastUptimeAt": "Data da Ultima medição",
-    "status": "Status",
-    "healthscore": "Saúde (%)"
+    "title": "Detalhes do Produto",
+    "category": "Categoria",
+    "product": "Produto",
+    "description": "Descrição",
+    "price": "Preço",
+    "status": "Status"
   }
 }

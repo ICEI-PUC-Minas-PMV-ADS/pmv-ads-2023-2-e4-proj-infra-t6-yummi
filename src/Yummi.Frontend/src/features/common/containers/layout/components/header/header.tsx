@@ -9,7 +9,7 @@ export const Header = (): JSX.Element => {
   const onOpen = useDrawerStore(store => store.onOpen);
 
   return (
-    <Layout.Header className="bg-primary-500 flex justify-center px-6">
+    <Layout.Header className="bg-black flex justify-center px-6" style={{ minHeight: '100px' }}>
       <div className="container inline-flex w-full justify-between">
         <Space>
           {isMobile && (
@@ -27,3 +27,4 @@ export const Header = (): JSX.Element => {
     </Layout.Header>
   );
 };
+
