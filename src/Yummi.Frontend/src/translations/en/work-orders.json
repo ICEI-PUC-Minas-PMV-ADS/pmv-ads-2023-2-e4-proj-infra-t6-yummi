@@ -1,42 +1,30 @@
 {
   "list-orders": {
-    "title": "Work Orders",
-    "add-order": "Add Service Order",
+    "title": "Orders",
+    "add-order": "Add Order",
     "search-for": "Search by name, id",
     "delete-confirmation": {
-      "title": "Delete Service Order",
-      "description": "Are you sure you want to delete the Work Order?"
+      "title": "Delete Order",
+      "description": "Are you sure you want to delete the order?"
     },
     "table": {
       "title": "Title",
-      "priority": "Priority",
       "status": "Status",
       "actions": "Actions",
-      "no-data": "No Work Order found"
+      "no-data": "No orders found"
     }
   },
   "form": {
-    "create-title": "New Service Order",
-    "edit-title": "Edit Service Order",
-    "title": "Title",
+    "create-title": "New Order",
+    "edit-title": "Edit Order",
+    "title": "Order",
     "description": "Description",
-    "assetId": "Active",
-    "assignedUserIds": "Assigned Users",
-    "priority": "Priority",
-    "status": "Status",
-    "checklist": "Tasks",
-    "add-checklist": "Add Task",
-    "remove-checklist": "Remove Task"
+    "status": "Status"
   },
   "status": {
     "completed": "Completed",
     "in progress": "In Progress",
     "on hold": "On Hold",
     "opened": "Opened"
-  },
-  "priority": {
-    "high": "High",
-    "medium": "Average",
-    "low": "Low"
   }
 }

@@ -11,15 +11,13 @@
       "name": "Name",
       "email": "Email",
       "actions": "Actions",
-      "no-data": "No User Found"
+      "no-data": "No users found"
     }
   },
   "form": {
     "create-title": "New User",
     "edit-title": "Edit User",
     "name": "Name",
-    "email": "Email",
-    "companyId": "Company",
-    "unitId": "Unit"
+    "email": "Email"
   }
 }

@@ -85,7 +85,7 @@ export const AssetForm = ({
         name="image"
         required
       >
-        <Upload>
+        <Upload accept="image/*"> 
           <Button icon={<UploadOutlined />}>Upload</Button>
         </Upload>
       </FormItem>

@@ -7,5 +7,6 @@ export const userSchema = (t: TFunction) =>
     name: validations(t).String(),
     email: validations(t).Email(),
     password: validations(t).String(),
-    confirmPassword: validations(t).String()
+    confirmPassword: validations(t).String(),
+    image: validations(t).String()
   });

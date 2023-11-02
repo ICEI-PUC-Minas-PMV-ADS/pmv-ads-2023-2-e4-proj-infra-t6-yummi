@@ -1,23 +1,22 @@
-import Icon, {
-  FileDoneOutlined,
-  TeamOutlined
+import {
+  TeamOutlined,
 } from '@ant-design/icons';
-import { HiChip } from 'react-icons/hi';
+import { MdRestaurantMenu, MdDescription } from 'react-icons/md'; 
 
 export const navbarItems = [
   {
     i18nKey: 'navbar.items.assets',
     href: '/assets',
-    icon: <Icon component={HiChip} />
+    icon: <MdRestaurantMenu /> 
   },
   {
     i18nKey: 'navbar.items.users',
     href: '/users',
-    icon: <TeamOutlined />
+    icon: <TeamOutlined /> 
   },
   {
     i18nKey: 'navbar.items.workorders',
     href: '/workorders',
-    icon: <FileDoneOutlined />
+    icon: <MdDescription /> 
   }
 ];

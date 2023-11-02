@@ -1,16 +1,15 @@
 {
-  "title": "Ativos",
-  "add-asset": "Adicionar Ativo",
+  "title": "Produtos",
+  "add-asset": "Adicionar Produto",
   "search-for": "Buscar por nome, id ou tag",
   "delete-confirmation": {
-    "title": "Excluir Ativo",
-    "description": "Tem certeza que deseja excluir o ativo?"
+    "title": "Excluir Produto",
+    "description": "Tem certeza que deseja excluir o produto?"
   },
   "table": {
     "name": "Nome",
     "status": "Status",
-    "healthscore": "Saúde (%)",
     "actions": "Ações",
-    "no-data": "Nenhum ativo encontrado"
+    "no-data": "Nenhum produto encontrado"
   }
 }
