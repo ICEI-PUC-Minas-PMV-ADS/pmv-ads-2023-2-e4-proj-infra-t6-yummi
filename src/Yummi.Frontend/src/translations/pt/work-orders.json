@@ -1,42 +1,30 @@
 {
   "list-orders": {
-    "title": "Ordens de Serviço",
-    "add-order": "Adicionar Ordem de Serviço",
+    "title": "Pedidos",
+    "add-order": "Adicionar Pedido",
     "search-for": "Buscar por nome, id",
     "delete-confirmation": {
-      "title": "Excluir Ordem de Serviço",
-      "description": "Tem certeza que deseja excluir a Ordem de Serviço?"
+      "title": "Excluir Pedido",
+      "description": "Tem certeza que deseja excluir o pedido?"
     },
     "table": {
       "title": "Titulo",
-      "priority": "Prioridade",
       "status": "Status",
       "actions": "Ações",
-      "no-data": "Nenhuma Ordem de Serviço encontrada"
+      "no-data": "Nenhum pedido encontrado"
     }
   },
   "form": {
-    "create-title": "Nova Ordem de Serviço",
-    "edit-title": "Editar Ordem de Serviço",
-    "title": "Titulo",
+    "create-title": "Novo Pedido",
+    "edit-title": "Editar Pedido",
+    "title": "Pedido",
     "description": "Descrição",
-    "assetId": "Ativo",
-    "assignedUserIds": "Usuários Responsáveis",
-    "priority": "Prioridade",
-    "status": "Status",
-    "checklist": "Tarefas",
-    "add-checklist": "Adicionar Tarefa",
-    "remove-checklist": "Remover Tarefa"
+    "status": "Status"
   },
   "status": {
-    "completed": "Completo",
-    "in progress": "Em Progresso",
+    "completed": "Finalizado",
+    "in progress": "Em Produção",
     "on hold": "Em Espera",
     "opened": "Em Aberto"
-  },
-  "priority": {
-    "high": "Alta",
-    "medium": "Média",
-    "low": "Baixa"
   }
 }

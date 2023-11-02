@@ -6,6 +6,7 @@ export type CreateUserDto = {
   email: string;
   password: string;
   confirmPassword: string;
+  image: string;
 };
 
 export const createUser = async (payload: CreateUserDto): Promise<IUser> => {

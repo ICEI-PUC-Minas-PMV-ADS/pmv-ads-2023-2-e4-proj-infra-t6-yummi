@@ -16,7 +16,6 @@
   "form": {
     "create-title": "Nova Unidade",
     "edit-title": "Editar Unidade",
-    "name": "Nome",
-    "companyId": "Empresa"
+    "name": "Nome"
   }
 }

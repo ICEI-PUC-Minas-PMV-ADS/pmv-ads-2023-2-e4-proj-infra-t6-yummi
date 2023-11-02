@@ -13,12 +13,6 @@ export interface IWorkOrderCheckList {
   task: string;
 }
 
-export enum WorkOrderPriority {
-  High = 'high',
-  Medium = 'medium',
-  Low = 'low'
-}
-
 export enum OrderStatus {
   Completed = 'completed',
   InProgress = 'in progress',

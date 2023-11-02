@@ -1,6 +1,7 @@
 import { FormItem } from '@/components/form';
 import { CreateUserDto } from '@/features/users/services';
-import { Button, Form, Input, Space } from 'antd';
+import { Button, Form, Input, Space, Upload } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 import { Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -49,10 +50,7 @@ export const UserForm = ({
         name="password"
         required
       >
-      <Input.Password
-        name="password"
-        required
-      />
+        <Input.Password />
       </FormItem>
 
       <FormItem<CreateUserDto>
@@ -61,10 +59,21 @@ export const UserForm = ({
         name="confirmPassword"
         required
       >
-      <Input.Password
-        name="confirmPassword"
-        required
-      />
+        <Input.Password />
+      </FormItem>
+
+      <FormItem<CreateUserDto>
+        control={control}
+        label={t('Insira sua foto aqui')}
+        name="image"
+      >
+        <Upload
+          maxCount={1} 
+          accept="image/*" 
+          beforeUpload={() => false}
+        >
+          <Button icon={<UploadOutlined />}>Upload</Button>
+        </Upload>
       </FormItem>
 
       <Space className="w-full justify-end">
