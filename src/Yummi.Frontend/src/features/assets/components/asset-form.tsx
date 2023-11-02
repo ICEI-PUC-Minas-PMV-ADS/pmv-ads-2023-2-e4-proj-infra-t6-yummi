@@ -1,8 +1,9 @@
 import { FormItem } from '@/components/form';
 import { CreateAssetDto } from '@/features/assets/services';
-import { Button, Form, Input, InputNumber, Select, Space } from 'antd';
+import { Button, Form, Input, InputNumber, Select, Space, Upload } from 'antd';
 import { Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { UploadOutlined } from '@ant-design/icons';
 
 type Props = {
   handleSubmit: (e?: React.BaseSyntheticEvent) => void | Promise<void>;
@@ -84,7 +85,9 @@ export const AssetForm = ({
         name="image"
         required
       >
-        <Input type="image" />
+        <Upload>
+          <Button icon={<UploadOutlined />}>Upload</Button>
+        </Upload>
       </FormItem>
 
       <Space className="w-full justify-end">
