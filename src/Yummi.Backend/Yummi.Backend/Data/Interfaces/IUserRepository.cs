@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver.Linq;
 using Yummi.Backend.Models;
 
-namespace Yummi.Backend.Data
+namespace Yummi.Backend.Data.Interfaces
 {
     public interface IUserRepository
     {

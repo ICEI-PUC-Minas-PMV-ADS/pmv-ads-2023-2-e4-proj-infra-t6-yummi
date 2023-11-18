@@ -7,6 +7,7 @@ using Serilog;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using Yummi.Backend.Models;
+using Yummi.Backend.Data.Interfaces;
 
 try
 {
@@ -65,6 +66,7 @@ try
 
     builder.Services.AddSingleton<IUserRepository, UserRepository>();
     builder.Services.AddSingleton<ICategoriaRepository, CategoriaRepository>();
+    builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 
     var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWT_Secret"));
 
@@ -98,6 +100,8 @@ try
 
     app.UseAuthentication();
     app.UseAuthorization();
+
+    app.UseStaticFiles();
 
     app.MapControllers();
 

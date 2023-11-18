@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Yummi.Backend.Data;
+using Yummi.Backend.Data.Interfaces;
 using Yummi.Backend.Dtos.Users;
 using Yummi.Backend.Models;
 using Yummi.Backend.Service;
