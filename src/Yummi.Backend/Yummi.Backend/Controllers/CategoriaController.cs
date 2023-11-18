@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Yummi.Backend.Data;
+using Yummi.Backend.Data.Interfaces;
 using Yummi.Backend.Dtos.Categoria;
 using Yummi.Backend.Models;
 using Yummi.Backend.Service;

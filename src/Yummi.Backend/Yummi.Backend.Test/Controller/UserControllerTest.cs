@@ -6,7 +6,7 @@ using MongoDB.Driver.Linq;
 using Moq;
 using System.Net;
 using Yummi.Backend.Controllers;
-using Yummi.Backend.Data;
+using Yummi.Backend.Data.Interfaces;
 using Yummi.Backend.Dtos.Users;
 using Yummi.Backend.Enum;
 using Yummi.Backend.Models;

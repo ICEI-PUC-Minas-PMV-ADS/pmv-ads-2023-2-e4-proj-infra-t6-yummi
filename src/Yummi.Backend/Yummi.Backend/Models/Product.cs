@@ -1,8 +1,10 @@
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
 
-namespace Yummi.Backend.Dtos.Products
+namespace Yummi.Backend.Models
 {
-    public class ProductCreateDto
+    public class Product : Entity
     {
         [Required]
         public string Name { get; set; }
@@ -14,9 +16,10 @@ namespace Yummi.Backend.Dtos.Products
         public string Description { get; set; }
 
         [Required]
+        [BsonRepresentation(BsonType.Decimal128)]
         public decimal Price { get; set; }
 
         [Required]
-        public IFormFile Image { get; set; }
-    }   
+        public string ImagePath { get; set; }
+    }
 }
