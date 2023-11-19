@@ -7,7 +7,7 @@ export const updateWorkOrder = async (
   payload: CreateWorkOrderDto
 ): Promise<IWorkOrder> => {
   const { data } = await httpClient.patch<IWorkOrder>(
-    `/workorders/${id}`,
+    `/api/Pedidos${id}`,
     payload
   );
   return data;

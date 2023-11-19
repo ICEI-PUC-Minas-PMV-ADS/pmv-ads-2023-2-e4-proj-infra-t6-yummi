@@ -1,7 +1,7 @@
 import { FormItem } from '@/components/form';
 import { CreateUserDto } from '@/features/users/services';
 import { Button, Form, Input, Space, Upload } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+//import { UploadOutlined } from '@ant-design/icons';
 import { Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -30,7 +30,6 @@ export const UserForm = ({
         control={control}
         label={t('form.name')}
         name="name"
-        required
       >
         <Input />
       </FormItem>
@@ -39,7 +38,6 @@ export const UserForm = ({
         control={control}
         label={t('form.email')}
         name="email"
-        required
       >
         <Input />
       </FormItem>
@@ -48,7 +46,6 @@ export const UserForm = ({
         control={control}
         label={t('Senha')}
         name="password"
-        required
       >
         <Input.Password />
       </FormItem>
@@ -57,24 +54,26 @@ export const UserForm = ({
         control={control}
         label={t('Confirme sua senha')}
         name="confirmPassword"
-        required
       >
         <Input.Password />
       </FormItem>
 
-      <FormItem<CreateUserDto>
-        control={control}
-        label={t('Insira sua foto aqui')}
-        name="image"
-      >
-        <Upload
-          maxCount={1} 
-          accept="image/*" 
-          beforeUpload={() => false}
-        >
-          <Button icon={<UploadOutlined />}>Upload</Button>
-        </Upload>
-      </FormItem>
+{/* 
+  <FormItem<CreateUserDto>
+    control={control}
+    label={t('Insira sua foto aqui')}
+    name="image"
+  >
+    <Upload
+      maxCount={1} 
+      accept="image/*" 
+      beforeUpload={() => false}
+    >
+      <Button icon={<UploadOutlined />}>Upload</Button>
+    </Upload>
+  </FormItem>
+*/}
+
 
       <Space className="w-full justify-end">
         <Button htmlType="button" onClick={onCancel}>

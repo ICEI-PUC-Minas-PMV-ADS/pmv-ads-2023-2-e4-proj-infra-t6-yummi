@@ -6,6 +6,6 @@ export const updateUser = async (
   id: number,
   payload: CreateUserDto
 ): Promise<IUser> => {
-  const { data } = await httpClient.patch<IUser>(`/users/${id}`, payload);
+  const { data } = await httpClient.patch<IUser>(`api/[controller]/${id}`, payload);
   return data;
 };
