@@ -26,7 +26,7 @@ export const createWorkOrder = async (
   payload: CreateWorkOrderDto
 ): Promise<IWorkOrder> => {
   const { data } = await httpClient.post<IWorkOrder>(
-    '/workorders',
+    '/api/Pedidos',
     mapPayloadToOrder(payload)
   );
   return data;

@@ -4,7 +4,7 @@ import { IWorkOrder } from '../entities';
 
 export const getWorkOrder = async (id: number): Promise<IWorkOrder | null> => {
   try {
-    const { data } = await httpClient.get<IWorkOrder>(`/workorders/${id}`);
+    const { data } = await httpClient.get<IWorkOrder>(`/api/Pedidos/${id}`);
     return data;
   } catch (error) {
     return null;
@@ -12,5 +12,5 @@ export const getWorkOrder = async (id: number): Promise<IWorkOrder | null> => {
 };
 
 export const useGetWorkOrder = (id: number) => {
-  return useQuery(['get-workorder', id], () => getWorkOrder(id));
+  return useQuery(['/api/Pedidos', id], () => getWorkOrder(id));
 };

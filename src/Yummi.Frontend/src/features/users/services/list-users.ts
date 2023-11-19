@@ -9,7 +9,7 @@ export const listUsers = async (search?: string): Promise<IUser[]> => {
   }
 
   try {
-    const { data } = await httpClient.get<IUser[]>(`/users?${params}`);
+    const { data } = await httpClient.get<IUser[]>(`api/[controller]?${params}`);
     return data;
   } catch (error) {
     return [];
@@ -17,5 +17,5 @@ export const listUsers = async (search?: string): Promise<IUser[]> => {
 };
 
 export const useListUsers = (search?: string) => {
-  return useQuery(['list-users', search], () => listUsers(search));
+  return useQuery(['api/[controller]', search], () => listUsers(search));
 };

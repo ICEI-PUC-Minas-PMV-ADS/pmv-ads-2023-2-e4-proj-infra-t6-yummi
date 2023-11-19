@@ -1,4 +1,4 @@
-import { assetsRoutes } from '@/features/assets/routes';
+import { productsRoutes } from '@/features/products/routes';
 import { ErrorPage, LayoutPage } from '@/features/common/containers';
 import { usersRoutes } from '@/features/users/routes';
 import { workOrdersRoutes } from '@/features/work-orders/routes';
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     element: <LayoutPage />,
     errorElement: <ErrorPage />,
     children: [
-      ...assetsRoutes,
+      ...productsRoutes,
       ...usersRoutes,
       ...workOrdersRoutes,
       {

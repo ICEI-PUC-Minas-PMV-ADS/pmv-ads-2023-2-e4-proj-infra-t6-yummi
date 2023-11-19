@@ -6,10 +6,9 @@ export type CreateUserDto = {
   email: string;
   password: string;
   confirmPassword: string;
-  image: string;
 };
 
 export const createUser = async (payload: CreateUserDto): Promise<IUser> => {
-  const { data } = await httpClient.post<IUser>('/users', payload);
+  const { data } = await httpClient.post<IUser>('/api/User', payload);
   return data;
 };

@@ -5,8 +5,8 @@ import { MdRestaurantMenu, MdDescription } from 'react-icons/md';
 
 export const navbarItems = [
   {
-    i18nKey: 'navbar.items.assets',
-    href: '/assets',
+    i18nKey: 'Produtos',
+    href: '/products',
     icon: <MdRestaurantMenu /> 
   },
   {
