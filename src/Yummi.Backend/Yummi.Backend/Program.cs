@@ -87,6 +87,10 @@ try
         };
     });
 
+    builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.WithOrigins("*")
+                                                                                 .AllowAnyMethod()
+                                                                                 .AllowAnyHeader()));
+
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -100,8 +104,8 @@ try
 
     app.UseAuthentication();
     app.UseAuthorization();
-
     app.UseStaticFiles();
+    app.UseCors();
 
     app.MapControllers();
 
