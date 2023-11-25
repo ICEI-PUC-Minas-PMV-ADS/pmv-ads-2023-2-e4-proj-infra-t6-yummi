@@ -1,13 +1,14 @@
 import { Card, Image, Skeleton, Space, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { IProduct, StatusEnum } from '@/features/products/entities';
+import { getEnv } from '@/utils';
 
 type Props = {
   product: IProduct;
 };
 
 export const DetailsCard = ({ product }: Props): JSX.Element => {
-  const { image, category, name, description, price } = product;
+  const { imagePath, category, name, description, price } = product;
   const { t } = useTranslation('productDetails', { keyPrefix: '' });
 
   const cardStyle = {
@@ -20,7 +21,7 @@ export const DetailsCard = ({ product }: Props): JSX.Element => {
       <Space direction="vertical" className="w-full">
         <div className="h-full max-h-[400px] w-full max-w-[500px] overflow-hidden rounded-lg">
           <Image
-            src={image} 
+            src={ getEnv('API_URL') + imagePath.replace('~', '')} 
             placeholder={
               <Skeleton.Image
                 active

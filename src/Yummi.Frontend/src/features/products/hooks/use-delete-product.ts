@@ -14,14 +14,15 @@ export const useDeleteProduct = ({ onSuccess }: Props = {}) => {
 
   const { mutateAsync } = useMutation(deleteProduct, {
     onSuccess: () => {
+      window.location.reload();
       queryClient.invalidateQueries(['list-products']);
       onSuccess?.();
     }
   });
 
   const { modal: deleteModal, openModal } = useConfirmationModal<IProduct>({
-    title: t('delete-confirmation.title'),
-    description: t('delete-confirmation.description'),
+    title: t('Excluir o produto'),
+    description: t('Deseja excluir o produto?'),
     onConfirm: product => mutateAsync(product.id)
   });
 

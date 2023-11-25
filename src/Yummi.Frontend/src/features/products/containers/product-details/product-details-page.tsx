@@ -11,7 +11,7 @@ export const Component = (): JSX.Element => {
   const { id = '0' } = useParams();
   const navigate = useNavigate();
 
-  const { data, isLoading } = useGetProduct(Number(id));
+  const { data, isLoading } = useGetProduct(id);
   const { deleteModal, onDelete } = useDeleteProduct({
     onSuccess: () => navigate('/products')
   });

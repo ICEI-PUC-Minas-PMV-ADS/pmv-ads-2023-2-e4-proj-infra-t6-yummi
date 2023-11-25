@@ -10,9 +10,10 @@ import { ListProductsTable } from './components/list-products-table';
 
 export const Component = () => {
   const { t } = useTranslation('listProducts');
-  const [search, setSearch] = useState('');
+  const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
 
-  const { data = [], isLoading } = useListProducts(search);
+  const { data = [], isLoading } = useListProducts(name, category);
   const { deleteModal, onDelete } = useDeleteProduct();
 
   return (
@@ -29,15 +30,27 @@ export const Component = () => {
           }
         />
 
-        <Input.Search
-          placeholder={t('search-for')}
-          size="large"
-          allowClear
-          enterButton
-          className="max-w-md"
-          onSearch={setSearch}
-          loading={isLoading}
-        />
+        <Space direction="horizontal" className="w-full">
+          <Input.Search
+            placeholder={t('Nome do produto')}
+            size="large"
+            allowClear
+            enterButton
+            className="max-w-md"
+            onSearch={setName}
+            loading={isLoading}
+          />
+          <Input.Search
+            placeholder={t('Categoria')}
+            size="large"
+            allowClear
+            enterButton
+            className="max-w-md"
+            onSearch={setCategory}
+            loading={isLoading}
+          />
+        </Space>
+
 
         <ListProductsTable
           products={data}

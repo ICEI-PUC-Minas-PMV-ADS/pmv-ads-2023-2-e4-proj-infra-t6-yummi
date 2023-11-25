@@ -8,12 +8,11 @@ import { productSchema } from '../schemas';
 import {
   CreateProductDto,
   getProduct,
-  mapProductToPayload,
   updateProduct,
   useGetProduct
 } from '../services';
 
-export const useEditProduct = (id: number) => {
+export const useEditProduct = (id: string) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -27,7 +26,7 @@ export const useEditProduct = (id: number) => {
         ['get-product', id],
         () => getProduct(id) as Promise<IProduct>
       );
-      return mapProductToPayload(product);
+      return product;
     }
   });
 
@@ -43,7 +42,7 @@ export const useEditProduct = (id: number) => {
   return {
     handleSubmit: handleSubmit(data => mutate(data)),
     control,
-    initialValues: data && mapProductToPayload(data),
+    initialValues: data && data,
     isSubmitting,
     isLoading
   };

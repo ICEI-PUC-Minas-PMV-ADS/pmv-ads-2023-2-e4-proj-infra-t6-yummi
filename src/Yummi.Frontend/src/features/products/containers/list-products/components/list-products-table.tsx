@@ -34,6 +34,11 @@ export const ListProductsTable = ({
       render: (name, record) => <Link to={`${record.id}`}>{name}</Link>
     },
     {
+      title: t('Categoria'),
+      dataIndex: 'category',
+      key: 'category'
+    },
+    {
       title: t('Ações'),
       key: 'actions',
       width: 100,

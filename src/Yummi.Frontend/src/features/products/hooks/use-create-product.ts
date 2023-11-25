@@ -7,6 +7,7 @@ import { productSchema } from '../schemas';
 import { CreateProductDto, createProduct } from '../services';
 
 export const useCreateProduct = () => {
+
   const navigate = useNavigate();
   const { t } = useTranslation();
   const queryClient = useQueryClient();

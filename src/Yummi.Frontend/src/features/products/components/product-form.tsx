@@ -1,44 +1,48 @@
-import { FormItem } from '@/components/form';
-import { CreateProductDto } from '@/features/products/services';
-import { Button, Form, Input, InputNumber, Select, Space, Upload } from 'antd';
-import { Control } from 'react-hook-form';
+import { CreateProductDto, createProduct } from '@/features/products/services';
+import { Button, Form, Input, InputNumber, Select, Space, Upload, UploadProps } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { UploadOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
-type Props = {
-  handleSubmit: (e?: React.BaseSyntheticEvent) => void | Promise<void>;
-  onCancel?: () => void;
-  control: Control<CreateProductDto, any>;
-  isSubmitting?: boolean;
-  initialValues?: Partial<CreateProductDto>;
-};
+export const ProductForm = () => {
 
-export const ProductForm = ({
-  handleSubmit,
-  onCancel,
-  control,
-  isSubmitting,
-  initialValues
-}: Props) => {
+  const [form] = Form.useForm();
   const { t } = useTranslation('createProduct');
+  const navigate = useNavigate();
+
+  const props: UploadProps = {
+    accept: 'image/*',
+    maxCount: 1,
+    multiple: false,
+    listType: 'picture',
+    beforeUpload: () => {
+      return false;
+    }
+  };
+
+  const onFinish = (values: CreateProductDto) => {
+    createProduct(values)
+      .then(() => navigate(`/products`))
+      .catch(error => console.error(error));
+  }
+
+  const onCancel = () => navigate(`/products`);
 
   return (
     <Form
-      initialValues={initialValues}
-      onFinish={handleSubmit}
       className="w-full max-w-2xl"
       layout="vertical"
+      form={form}
+      onFinish={onFinish}
     >
-      <FormItem<CreateProductDto>
-        control={control}
+      <Form.Item
         label={t('Produto')}
         name="name"
       >
         <Input />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateProductDto>
-        control={control}
+      <Form.Item
         label={t('Categoria')}
         name="category"
       >
@@ -57,39 +61,36 @@ export const ProductForm = ({
             </Select.Option>
           ))}
         </Select>
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateProductDto>
-        control={control}
+      <Form.Item
         label={t('Descrição')}
         name="description"
       >
         <Input.TextArea />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateProductDto>
-        control={control}
+      <Form.Item
         label={t('Preço')}
         name="price"
       >
         <InputNumber min={0} className="w-full" />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateProductDto>
-        control={control}
+      <Form.Item
         label={t('Imagem')}
         name="image"
       >
-        <Upload accept="image/*"> 
+        <Upload {...props}> 
           <Button icon={<UploadOutlined />}>Upload</Button>
         </Upload>
-      </FormItem>
+      </Form.Item>
 
       <Space className="w-full justify-end">
         <Button htmlType="button" onClick={onCancel}>
           {t('dictionary:cancel')}
         </Button>
-        <Button type="primary" htmlType="submit" loading={isSubmitting}>
+        <Button type="primary" htmlType="submit">
           {t('dictionary:save')}
         </Button>
       </Space>
