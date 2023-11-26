@@ -1,9 +1,7 @@
 import { PageHeader } from '@/components/layout';
-import { PlusCircleOutlined } from '@ant-design/icons';
-import { Button, Card, Input, Space } from 'antd';
+import { Card, Input, Space } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { useDeleteWorkOrder } from '../../hooks';
 import { useListWorkOrders } from '../../services';
 import { ListOrdersTable } from './components';
@@ -20,13 +18,6 @@ export const Component = () => {
       <Space direction="vertical" className="w-full" size={24}>
         <PageHeader
           title={t('Pedidos')}
-          actions={
-            <Link to="create">
-              <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
-                {t('Adicionar Pedido')}
-              </Button>
-            </Link>
-          }
         />
 
         <Input.Search
