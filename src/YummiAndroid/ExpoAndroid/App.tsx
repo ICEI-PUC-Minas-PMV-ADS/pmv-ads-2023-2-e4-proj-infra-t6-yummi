@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, ScrollView} from 'react-native';
+import { StyleSheet, View} from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 
 import Header from "./assets/Src/Header";
@@ -24,9 +25,10 @@ const Tab = createMaterialTopTabNavigator();
 export default function App() {
   return (
     <View style={styles.container}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
       <Header/>
       <MenuBtn/>
-      <Body/>
+    </GestureHandlerRootView>
       <StatusBar style="light" />
     </View>
 
