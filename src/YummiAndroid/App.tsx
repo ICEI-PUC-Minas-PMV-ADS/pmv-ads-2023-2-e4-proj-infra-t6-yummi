@@ -8,7 +8,7 @@ const ProductScreen = () => {
 
 
   const fetchProducts = () => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('http://192.168.0.100:5000/api/products')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data);
