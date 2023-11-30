@@ -7,40 +7,46 @@ const ProductScreen = () => {
   const [products, setProducts] = useState([]);
 
 
-  const fetchProducts = () => {
-    axios.get('http://192.168.0.100:5000/api/products')
-      .then((response) => {
-        setProducts(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
       });
-  };
+
+ const ProductScreen = () => {
+   const [products, setProducts] = useState([]);
+   const fetchProducts = () => {
+     axios.get('http://192.168.0.100:5000/api/products')
+       .then((response) => {
+         setProducts(response.data);
+         console.log(response.data);
+         console.log(response.headers);
+         console.log(response.status);
+       })
+       .catch((error) => {
+         console.error(error);
+       });
+   };
 
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+   useEffect(() => {
+     fetchProducts();
+   }, []);
 
-  return (
-    <View>
-      <Text>Lista de Produtos:</Text>
-      <FlatList
-        data={products}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View>
-            <Text>Nome: {item.nome}</Text>
-            <Text>Descrição: {item.descricao}</Text>
-            <Text>Preço: R$ {item.preco.toFixed(2)}</Text>
-            {/* Exiba outras informações do produto aqui */}
-          </View>
-        )}
-      />
+   return (
+     <View>
+       <Text>Lista de Produtos:</Text>
+       <FlatList
+         data={products}
+         keyExtractor={(item) => item.id.toString()}
+         renderItem={({ item }) => (
+           <View>
+             <Text>Nome: {item.nome}</Text>
+             <Text>Descrição: {item.descricao}</Text>
+             <Text>Preço: R$ {item.preco.toFixed(2)}</Text>
+             {/* Exiba outras informações do produto aqui */}
+           </View>
+         )}
+       />
 
-    </View>
-  );
-};
+     </View>
+   );
+ };
 
-export default ProductScreen;
+ export default ProductScreen;
