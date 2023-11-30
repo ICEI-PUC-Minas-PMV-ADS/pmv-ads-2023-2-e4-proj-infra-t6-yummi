@@ -7,7 +7,6 @@ const ProductScreen = () => {
   const [products, setProducts] = useState([]);
 
 
-      });
 
  const ProductScreen = () => {
    const [products, setProducts] = useState([]);
