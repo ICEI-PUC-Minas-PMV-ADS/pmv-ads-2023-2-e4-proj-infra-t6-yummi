@@ -3,10 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import axios from 'axios';
 
-const ProductScreen = () => {
-  const [products, setProducts] = useState([]);
-
-
 
  const ProductScreen = () => {
    const [products, setProducts] = useState([]);
@@ -30,7 +26,7 @@ const ProductScreen = () => {
 
    return (
      <View>
-       <Text>Lista de Produtos:</Text>
+       <Text>Pratos</Text>
        <FlatList
          data={products}
          keyExtractor={(item) => item.id.toString()}
@@ -48,4 +44,4 @@ const ProductScreen = () => {
    );
  };
 
- export default ProductScreen;
+export default ProductScreen;
