@@ -1,81 +1,175 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Yummi.Backend.Data.Interfaces;
 using Yummi.Backend.Dtos.Products;
-
-
+using Yummi.Backend.Models;
 
 namespace Yummi.Backend.Controllers
 {
-    [Route("api/products")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly List<ProductCreateDto> products = new List<ProductCreateDto>();
-        private int nextProductId = 1;
+        private readonly IProductRepository _productRepository;
+        private readonly ILogger<UserController> _logger;
 
-        // Rota: GET /api/products
-        [HttpGet]
-        public ActionResult<IEnumerable<ProductCreateDto>> GetProducts()
+        private readonly string FilePath = $"{Directory.GetCurrentDirectory()}\\wwwroot\\images\\";
+
+        public ProductController(IProductRepository productRepository, ILogger<UserController> logger)
         {
-            return Ok(products);
+            _productRepository = productRepository;
+            _logger = logger;
         }
 
-        // Rota: GET /api/products/{id}
-        [HttpGet("{id}")]
-        public ActionResult<ProductCreateDto> GetProduct(int id)
-        {
-            var product = products.Find(p => p.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return Ok(product);
-        }
-
-        // Rota: POST /api/products
         [HttpPost]
-        public ActionResult<ProductCreateDto> CreateProduct(ProductCreateDto productDto)
+        [AllowAnonymous]
+        public async Task<ActionResult> CreateProduct([FromForm]ProductCreateDto productDto)
         {
-            if (productDto == null)
+            try
             {
-                return BadRequest("Dados inválidos");
+                if (!IsImage(productDto.Image))
+                    return BadRequest("O arquivo enviado não é uma imagem.");
+
+                var imagePath = await SaveImageAsync(productDto.Image);
+
+                var product = new Product
+                {
+                    Name = productDto.Name,
+                    Category = productDto.Category,
+                    Description = productDto.Description,
+                    Price = productDto.Price,
+                    ImagePath = imagePath
+                };
+
+                await _productRepository.CreateProductAsync(product);
+
+                _logger.LogInformation("Produto cadastrado com sucesso", product);
+                return Created(string.Empty, product);
             }
-
-            productDto.Id = nextProductId++;
-            products.Add(productDto);
-
-            return CreatedAtAction(nameof(GetProduct), new { id = productDto.Id }, productDto);
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao cadastrar o produto");
+                return BadRequest(e.Message);
+            }
         }
 
-        // Rota: PUT /api/products/{id}
+        [HttpGet]
+        public ActionResult GetAllProducts(string name, string category, int page = 0, int pageSize = 10) 
+        {
+            try
+            {
+                var products = _productRepository.GetAllProducts().AsQueryable();
+
+                if (!string.IsNullOrEmpty(name))
+                    products = products.Where(e => e.Name.ToLower().StartsWith(name.Trim().ToLower()));
+
+                if (!string.IsNullOrEmpty(category))
+                    products = products.Where(e => e.Category.ToLower().Equals(category.Trim().ToLower()));
+
+                return Ok(products.OrderBy(e => e.Name).Skip(page * pageSize).Take(pageSize).ToList());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao buscar todos os produtos");
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetProductById(string id)
+        {
+            try
+            {
+                var product = await _productRepository.GetProductByIdAsync(id);
+
+                if (product is null)
+                    return NotFound("Produto não encontrado");
+
+                return Ok(product);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao buscar produto por id");
+                return BadRequest(e.Message);
+            }
+        }
+
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, ProductCreateDto updatedProduct)
+        public async Task<ActionResult> UpdateProduct(string id, [FromForm]ProductUpdateDto productUpdate)
         {
-            var existingProduct = products.Find(p => p.Id == id);
-            if (existingProduct == null)
+            try
             {
-                return NotFound();
+                var product = await _productRepository.GetProductByIdAsync(id);
+
+                if (product is null)
+                    return NotFound("Produto não encontrado");
+
+                var productChange = new Product
+                {
+                    Id = id,
+                    Name = productUpdate.Name ?? product.Name,
+                    Category = productUpdate.Category ?? product.Category,
+                    Description = productUpdate.Description ?? product.Description,
+                    Price = productUpdate.Price != 0 ? productUpdate.Price : product.Price,
+                    ImagePath = product.ImagePath
+                };
+
+                if (productUpdate.Image != null)
+                {
+                    if (!IsImage(productUpdate.Image))
+                        return BadRequest("O arquivo enviado não é uma imagem.");
+
+                    RemoveImage(product.ImagePath);
+                    productChange.ImagePath = await SaveImageAsync(productUpdate.Image);
+                }
+
+                await _productRepository.UpdateProductAsync(productChange);
+                return Ok(productChange);
             }
-
-            // Atualize os campos do produto existente com os valores do produto atualizado.
-            existingProduct.Nome = updatedProduct.Nome;
-            existingProduct.Preco = updatedProduct.Preco;
-
-            return NoContent();
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao alterar o produto");
+                return BadRequest(e.Message);
+            }
         }
 
-        // Rota: DELETE /api/products/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteProduct(int id)
+        public async Task<ActionResult> DeleteProduct(string id)
         {
-            var product = products.Find(p => p.Id == id);
-            if (product == null)
+            try
             {
-                return NotFound();
+                await _productRepository.DeleteProductAsync(id);
+                return Ok($"Produto deletado com sucesso");
             }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao deletar o produto");
+                return BadRequest(e.Message);
+            }
+        }
 
-            products.Remove(product);
+        private static bool IsImage(IFormFile formFile) => Path.GetExtension(formFile.FileName).Trim().ToLower() switch 
+        { 
+            ".jpeg" => true,
+            ".jpg" => true,
+            ".png" => true,
+            _ => false
+        };
 
-            return NoContent();
+        private async Task<string> SaveImageAsync(IFormFile formFile)
+        {
+            var fileName = DateTime.Now.Ticks + Path.GetExtension(formFile.FileName);
+            using var stream = System.IO.File.Create(FilePath + fileName);
+            await formFile.CopyToAsync(stream);
+            return $"~/images/{fileName}";
+        }
+
+        private void RemoveImage(string pathFile)
+        {
+            var fileName = Path.GetFileName(pathFile);
+            var path = FilePath + fileName;
+            if (System.IO.File.Exists(path)) 
+                System.IO.File.Delete(path);
         }
     }
 }

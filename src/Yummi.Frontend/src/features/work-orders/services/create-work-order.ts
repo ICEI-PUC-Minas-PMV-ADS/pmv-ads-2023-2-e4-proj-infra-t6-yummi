@@ -1,5 +1,5 @@
 import { httpClient } from '@/config/libs';
-import { IWorkOrder, OrderStatus, WorkOrderPriority } from '../entities';
+import { IWorkOrder, OrderStatus } from '../entities';
 
 export type CreateWorkOrderDto = {
   assetId: number;
@@ -7,7 +7,6 @@ export type CreateWorkOrderDto = {
   title: string;
   description: string;
   checklist: string[];
-  priority: WorkOrderPriority;
   status: OrderStatus;
 };
 
@@ -27,7 +26,7 @@ export const createWorkOrder = async (
   payload: CreateWorkOrderDto
 ): Promise<IWorkOrder> => {
   const { data } = await httpClient.post<IWorkOrder>(
-    '/workorders',
+    '/api/Pedidos',
     mapPayloadToOrder(payload)
   );
   return data;

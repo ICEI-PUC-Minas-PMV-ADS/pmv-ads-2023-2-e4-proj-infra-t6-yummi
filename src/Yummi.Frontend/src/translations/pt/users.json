@@ -18,8 +18,6 @@
     "create-title": "Novo Usuário",
     "edit-title": "Editar Usuário",
     "name": "Nome",
-    "email": "E-mail",
-    "companyId": "Empresa",
-    "unitId": "Unidade"
+    "email": "E-mail"
   }
 }

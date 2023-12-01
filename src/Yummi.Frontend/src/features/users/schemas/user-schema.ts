@@ -5,7 +5,8 @@ import { CreateUserDto } from '../services';
 export const userSchema = (t: TFunction) =>
   validations(t).Object<CreateUserDto>({
     name: validations(t).String(),
-    companyId: validations(t).Number(),
-    unitId: validations(t).Number(),
-    email: validations(t).Email()
+    email: validations(t).Email(),
+    password: validations(t).String(),
+    confirmPassword: validations(t).String(),
+    image: validations(t).String()
   });

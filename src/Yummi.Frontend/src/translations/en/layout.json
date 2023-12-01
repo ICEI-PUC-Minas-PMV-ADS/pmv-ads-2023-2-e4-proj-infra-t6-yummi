@@ -2,11 +2,8 @@
   "navbar": {
     "items": {
       "assets": "Assets",
-      "companies": "Companies",
-      "units": "Units",
       "users": "Users",
-      "workorders": "Work Orders",
-      "dashboard": "Dashboard"
+      "workorders": "Work Orders"
     }
   },
   "change-language": "Change language"

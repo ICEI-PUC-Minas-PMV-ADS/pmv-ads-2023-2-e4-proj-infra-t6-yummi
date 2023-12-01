@@ -5,19 +5,12 @@ export interface IWorkOrder {
   title: string;
   description: string;
   checklist: IWorkOrderCheckList[];
-  priority: WorkOrderPriority;
   status: OrderStatus;
 }
 
 export interface IWorkOrderCheckList {
   completed: boolean;
   task: string;
-}
-
-export enum WorkOrderPriority {
-  High = 'high',
-  Medium = 'medium',
-  Low = 'low'
 }
 
 export enum OrderStatus {

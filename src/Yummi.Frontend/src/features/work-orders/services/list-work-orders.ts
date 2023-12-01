@@ -12,7 +12,7 @@ export const listWorkOrders = async (
 
   try {
     const { data } = await httpClient.get<IWorkOrder[]>(
-      `/workorders?${params}`
+      `/api/Pedidos?${params}`
     );
     return data;
   } catch (error) {
@@ -21,5 +21,5 @@ export const listWorkOrders = async (
 };
 
 export const useListWorkOrders = (search?: string) => {
-  return useQuery(['list-workorders', search], () => listWorkOrders(search));
+  return useQuery(['/api/Pedidos', search], () => listWorkOrders(search));
 };

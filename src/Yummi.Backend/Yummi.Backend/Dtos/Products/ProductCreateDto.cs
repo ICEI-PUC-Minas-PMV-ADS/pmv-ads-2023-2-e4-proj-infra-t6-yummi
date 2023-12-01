@@ -1,36 +1,22 @@
 using System.ComponentModel.DataAnnotations;
-using Yummi.Backend.Models;
-using Yummi.Backend.Enum;
 
 namespace Yummi.Backend.Dtos.Products
 {
     public class ProductCreateDto
     {
         [Required]
-        public int Id { get; set; }
-        [Required]
-        public string Nome { get; set; }
-        [Required]
-        public string Descricao { get; set; }
-        [Required]
-        public decimal Preco { get; set; }        
-        [Required]
-        public TipoRefeicao TipoRefeicao { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public TipoCozinha TipoCozinha { get; set; }
+        public string Category { get; set; }
 
         [Required]
-        public Models.Categoria Categoria { get; set; }
+        public string Description { get; set; }
 
         [Required]
-        public TipoBebida TipoBebida { get; set; }
+        public decimal Price { get; set; }
 
         [Required]
-        public EstiloCulinaria Estilo { get; set; }
-
-        public RestricaoAlimentar? Restricao { get; set; }
-
-        public Temporada? Temporada { get; set; }
+        public IFormFile Image { get; set; }
     }   
 }

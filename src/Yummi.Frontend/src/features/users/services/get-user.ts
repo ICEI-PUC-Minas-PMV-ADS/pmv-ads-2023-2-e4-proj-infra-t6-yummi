@@ -4,7 +4,7 @@ import { IUser } from '../entities';
 
 export const getUser = async (id: number): Promise<IUser | null> => {
   try {
-    const { data } = await httpClient.get<IUser>(`/users/${id}`);
+    const { data } = await httpClient.get<IUser>(`/api/User/authenticate${id}`);
     return data;
   } catch (error) {
     return null;
@@ -12,5 +12,5 @@ export const getUser = async (id: number): Promise<IUser | null> => {
 };
 
 export const useGetUser = (id: number) => {
-  return useQuery(['get-user', id], () => getUser(id));
+  return useQuery(['/api/User/authenticate', id], () => getUser(id));
 };

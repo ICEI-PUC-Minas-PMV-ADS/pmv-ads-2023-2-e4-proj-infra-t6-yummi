@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using Yummi.Backend.Data.Interfaces;
 using Yummi.Backend.Models;
 
 namespace Yummi.Backend.Data
