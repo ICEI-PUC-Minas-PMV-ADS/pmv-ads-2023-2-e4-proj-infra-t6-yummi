@@ -7,7 +7,7 @@ import axios from 'axios';
  const ProductScreen = () => {
    const [products, setProducts] = useState([]);
    const fetchProducts = () => {
-     axios.get('http://192.168.0.100:5000/api/products')
+     axios.get('http://192.167.0.100:5000/api/products')
        .then((response) => {
          setProducts(response.data);
          console.log(response.data);
@@ -32,9 +32,9 @@ import axios from 'axios';
          keyExtractor={(item) => item.id.toString()}
          renderItem={({ item }) => (
            <View>
-             <Text>Nome: {item.nome}</Text>
-             <Text>Descrição: {item.descricao}</Text>
-             <Text>Preço: R$ {item.preco.toFixed(2)}</Text>
+             <Text>Nome: {item.name}</Text>
+             <Text>Descrição: {item.Description}</Text>
+             <Text>Preço: R$ {item.Price.toFixed(2)}</Text>
              {/* Exiba outras informações do produto aqui */}
            </View>
          )}
