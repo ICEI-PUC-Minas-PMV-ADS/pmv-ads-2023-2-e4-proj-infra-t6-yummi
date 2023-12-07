@@ -164,7 +164,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Verifiquei se o acesso foi bloqueado ou redirecionado para uma página de erro.
 - **Critérios de Êxito:** O sistema bloqueia o acesso a partir de dispositivos não compatíveis.
 - **Resultado:** Não realizado.
-- 
+  
 #### Restrição 02: Limite de Tamanho e Tipo de Arquivos de Imagem
 
 - **Objetivo:** Verificar se o sistema impõe limites de tamanho e tipo de arquivos de imagem para os pratos no cardápio.
