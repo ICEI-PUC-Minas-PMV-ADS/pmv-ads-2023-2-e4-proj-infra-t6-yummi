@@ -9,19 +9,20 @@ type Props = {
 };
 
 export const useDeleteUser = ({ onSuccess }: Props = {}) => {
-  const { t } = useTranslation('users', { keyPrefix: 'list-users' });
+  const { t } = useTranslation('listUsers');
   const queryClient = useQueryClient();
 
   const { mutateAsync } = useMutation(deleteUser, {
     onSuccess: () => {
+      window.location.reload();
       queryClient.invalidateQueries(['list-users']);
       onSuccess?.();
     }
   });
 
   const { modal: deleteModal, openModal } = useConfirmationModal<IUser>({
-    title: t('delete-confirmation.title'),
-    description: t('delete-confirmation.description'),
+    title: t('Excluir Usuário'),
+    description: t('Deseja excluir o usuário?'),
     onConfirm: user => mutateAsync(user.id)
   });
 

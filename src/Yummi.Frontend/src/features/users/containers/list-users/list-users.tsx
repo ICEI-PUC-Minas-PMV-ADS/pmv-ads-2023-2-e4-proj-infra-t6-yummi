@@ -9,33 +9,34 @@ import { useListUsers } from '../../services';
 import { ListUsersTable } from './components';
 
 export const Component = () => {
-  const { t } = useTranslation('users', { keyPrefix: 'list-users' });
-  const [search, setSearch] = useState('');
+  const { t } = useTranslation('listUsers');
+  const [name, setName] = useState('');
 
-  const { data = [], isLoading } = useListUsers(search);
+  const { data = [], isLoading } = useListUsers(name);
   const { deleteModal, onDelete } = useDeleteUser();
 
   return (
     <Card className="w-full">
       <Space direction="vertical" className="w-full" size={24}>
         <PageHeader
-          title={t('title')}
+          title={t('Usuários Cadastrados')}
           actions={
             <Link to="create">
               <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
-                {t('add-user')}
+                {t('Adicionar Usuário')}
               </Button>
             </Link>
           }
         />
-
+        
+        <Space direction="horizontal" className="w-full"></Space>
         <Input.Search
-          placeholder={t('search-for')}
+          placeholder={t('Pesquisar por Nome')}
           size="large"
           allowClear
           enterButton
           className="max-w-md"
-          onSearch={setSearch}
+          onSearch={setName}
           loading={isLoading}
         />
 

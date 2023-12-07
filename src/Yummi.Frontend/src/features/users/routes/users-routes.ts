@@ -10,6 +10,10 @@ export const usersRoutes: RouteObject[] = [
     lazy: () => import('@/features/users/containers/create-user')
   },
   {
+    path: '/users/:id',
+    lazy: () => import('@/features/users/containers/user-details')
+  },
+  {
     path: '/users/:id/edit',
     lazy: () => import('@/features/users/containers/edit-user')
   }

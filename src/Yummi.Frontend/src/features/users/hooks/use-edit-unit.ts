@@ -7,7 +7,7 @@ import { IUser } from '../entities';
 import { userSchema } from '../schemas';
 import { CreateUserDto, getUser, updateUser, useGetUser } from '../services';
 
-export const useEditUser = (id: number) => {
+export const useEditUser = (id: string) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const queryClient = useQueryClient();

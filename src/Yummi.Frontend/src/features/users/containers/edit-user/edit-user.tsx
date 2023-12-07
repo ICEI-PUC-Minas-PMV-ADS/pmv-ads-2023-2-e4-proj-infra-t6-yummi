@@ -9,7 +9,7 @@ import { UserForm } from '../../components';
 export const Component = (): JSX.Element | null => {
   const { id = '0' } = useParams();
 
-  const { t } = useTranslation('users');
+  const { t } = useTranslation('createUser');
   const navigate = useNavigate();
 
   const { control, handleSubmit, initialValues, isSubmitting, isLoading } =
@@ -26,7 +26,7 @@ export const Component = (): JSX.Element | null => {
   return (
     <Card className="mx-auto w-full max-w-2xl">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('form.edit-title')} backButtonLink={`/users`} />
+        <PageHeader title={t('Editar Usuário')} backButtonLink={`/users/${id}`} />
         <UserForm
           handleSubmit={handleSubmit}
           onCancel={() => navigate('/users')}
