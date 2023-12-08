@@ -21,14 +21,14 @@ function ProductScreen() {
 const Item = ({item}) => (
 
     <View style={styles.container}>
-        <Image style={{ width: 100, height: 80 }} source={item.image} />
+        <Image style={styles.image} source={item.image} />
         <View style={styles.content}>
-            <Text style={styles.title}>Prato: {item.name ?? 'Indisponível'}</Text>
-            <Text numberOfLines={5} style={styles.description}>Descrição: {item.description ?? 'Indisponível'}</Text>
-            <Text style={styles.preco}>R$ {item.price ?? 'Indisponível'}</Text>
+            <Text style={styles.title}>{item.name ?? 'Indisponível'}</Text>
+            <Text numberOfLines={5} style={styles.description}>{item.description ?? 'Indisponível'}</Text>
+            <Text style={styles.preco}>R$ {item.price.toFixed(2) ?? 'Indisponível'}</Text>
         </View>
     </View>
-)
+);
   return (
     <View>
         <Text style={styles.menu}>Menu</Text>
@@ -37,46 +37,50 @@ const Item = ({item}) => (
         renderItem={Item}
         keyExtractor={item=>item.id}
         />
-      
+
 
     </View>
   );
 }
 const styles = StyleSheet.create({
     container: {
-      flexDirection: "row",
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "space-between",
+      flexDirection: 'row',
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       paddingHorizontal: 16,
-      paddingVertical: 20
+      paddingVertical: 20,
     },
-  
+
     content: {
       flex: 1,
       marginLeft: 16,
     },
-  
+
     title: {
       fontSize: 15,
-      fontWeight: "bold",
-      color: "#6F4E37",
+      fontWeight: 'bold',
+      color: '#6F4E37',
       marginBottom: 4,
     },
-  
+
     description: {
       fontSize: 14,
       marginBottom: 4,
-      color: "#000"
+      color: '#000',
     },
-  
+
     preco: {
       fontSize: 15,
-      fontWeight: "bold"
+      fontWeight: 'bold',
     },
     menu: {
         fontSize: 20,
-        textAlign: "center"
-    }
-  })
+        textAlign: 'center',
+    },
+    image: {
+        width: 100,
+        height: 80,
+    },
+  });
 export default ProductScreen;
