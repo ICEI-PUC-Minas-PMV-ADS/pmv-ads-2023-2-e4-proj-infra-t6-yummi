@@ -2,7 +2,6 @@
 import React from 'react';
 import {View} from 'react-native';
 
-
 import ProductScreen from './ProductScreen';
 
 function App() {
