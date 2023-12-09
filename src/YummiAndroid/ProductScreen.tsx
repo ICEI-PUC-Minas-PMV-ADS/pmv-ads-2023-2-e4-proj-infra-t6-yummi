@@ -12,6 +12,7 @@ function ProductScreen() {
         setProducts(response.data);
         console.log(response.data);
         console.log(response.status);
+        // console.log(response.headers);
       })
       .catch((error) => {
         console.log(error);
@@ -21,7 +22,8 @@ function ProductScreen() {
 const Item = ({item}) => (
 
     <View style={styles.container}>
-        <Image style={styles.image} source={item.image} />
+        <Image source={''}
+        style={styles.image} />
         <View style={styles.content}>
             <Text style={styles.title}>{item.name ?? 'Indisponível'}</Text>
             <Text numberOfLines={5} style={styles.description}>{item.description ?? 'Indisponível'}</Text>
@@ -31,12 +33,11 @@ const Item = ({item}) => (
 );
   return (
     <View>
-        <Text style={styles.menu}>Menu</Text>
-        <FlatList
+      <FlatList
         data={product}
         renderItem={Item}
         keyExtractor={item=>item.id}
-        />
+      />
 
 
     </View>
@@ -74,10 +75,7 @@ const styles = StyleSheet.create({
       fontSize: 15,
       fontWeight: 'bold',
     },
-    menu: {
-        fontSize: 20,
-        textAlign: 'center',
-    },
+
     image: {
         width: 100,
         height: 80,
