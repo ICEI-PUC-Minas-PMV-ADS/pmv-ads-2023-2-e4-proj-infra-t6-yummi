@@ -1,6 +1,6 @@
-import {
-  TeamOutlined,
-} from '@ant-design/icons';
+//import {
+//  TeamOutlined,
+//} from '@ant-design/icons';
 import { MdRestaurantMenu, MdDescription } from 'react-icons/md'; 
 
 export const navbarItems = [
@@ -9,11 +9,11 @@ export const navbarItems = [
     href: '/products',
     icon: <MdRestaurantMenu /> 
   },
-  {
+/*  {
     i18nKey: 'navbar.items.users',
     href: '/users',
     icon: <TeamOutlined /> 
-  },
+  },*/
   {
     i18nKey: 'navbar.items.workorders',
     href: '/workorders',

@@ -19,7 +19,7 @@ export const Component = () => {
     <Card className="w-full">
       <Space direction="vertical" className="w-full" size={24}>
         <PageHeader
-          title={t('Usuários Cadastrados')}
+          title={t('Meu Perfil')}
           actions={
             <Link to="create">
               <Button type="primary" size="large" icon={<PlusCircleOutlined />}>

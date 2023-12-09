@@ -1,4 +1,4 @@
-import { LoadingState } from '@/components/feedback';
+/*import { LoadingState } from '@/components/feedback';
 import { PageHeader } from '@/components/layout';
 import { useEditUser } from '@/features/users/hooks';
 import { Card, Space } from 'antd';
@@ -13,7 +13,7 @@ export const Component = (): JSX.Element | null => {
   const navigate = useNavigate();
 
   const { control, handleSubmit, initialValues, isSubmitting, isLoading } =
-    useEditUser(Number(id));
+    useEditUser(String(id));
 
   if (isLoading) {
     return <LoadingState />;
@@ -36,4 +36,4 @@ export const Component = (): JSX.Element | null => {
       </Space>
     </Card>
   );
-};
+};*/
