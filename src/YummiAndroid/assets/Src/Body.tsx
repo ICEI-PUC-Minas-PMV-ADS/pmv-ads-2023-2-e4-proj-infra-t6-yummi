@@ -1,8 +1,11 @@
-import { StyleSheet, View, FlatList, ListRenderItemInfo, Text } from 'react-native';
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/react-in-jsx-scope */
 
-import { PratosItem } from "../Components/PratosItem";
-import { SeparatorItem } from "../Components/SeparatorItem/SeparatorItem";
-import { Pratos, pratosList } from "../Data/PratosList";
+import { StyleSheet, View, FlatList, ListRenderItemInfo } from 'react-native';
+
+import { PratosItem } from '../Components/PratosItem';
+import { SeparatorItem } from '../Components/SeparatorItem/SeparatorItem';
+import { Pratos, pratosList } from '../Data/PratosList';
 
 export default function Body() {
 
@@ -16,7 +19,7 @@ export default function Body() {
             data={pratosList}
             keyExtractor={(item) => item.name}
             renderItem={renderItem}
-        />   
+        />
       </View>
     );
 }
@@ -25,6 +28,6 @@ export default function Body() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#fff"
-    }
-})
+      backgroundColor: '#fff',
+    },
+});

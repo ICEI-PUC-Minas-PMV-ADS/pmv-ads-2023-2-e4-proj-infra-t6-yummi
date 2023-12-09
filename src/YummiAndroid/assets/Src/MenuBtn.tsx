@@ -1,14 +1,17 @@
-import { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from "react-native";
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/react-in-jsx-scope */
+
+import { useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { Pratos, pratosList } from '../Data/PratosList';
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList } from 'react-native-gesture-handler';
 
 export default function MenuBtn() {
-  const [selectedButton, setSelectedButton] = useState("Todos");
+  const [selectedButton, setSelectedButton] = useState('Todos');
   const [foodList, setFoodList] = useState(pratosList);
 
   const filterPratosByCategoria = (categoria) => {
-    if (categoria === "Todos") {
+    if (categoria === 'Todos') {
       return pratosList;
     } else {
       return pratosList.filter((prato) => prato.categoria === categoria);
@@ -21,7 +24,7 @@ export default function MenuBtn() {
   const sortedList = filteredList.slice().sort((a, b) => a.name.localeCompare(b.name));
   setFoodList(sortedList);
   };
-  
+
 
   const renderPratoItem = ({ item }) => (
     <View style={styles.pratoItemContainer}>
@@ -36,17 +39,16 @@ export default function MenuBtn() {
     </View>
   );
 
-    return(
+    return (
         <View style={styles.container}>
           <ScrollView horizontal
-          
           contentContainerStyle={styles.scrollViewContent}>
           <View style={styles.buttonsContainer}>
-            {["Todos", "Entradas", "Pratos Principais", "Drinks e Bebidas", "Sobremesas"].map((category) => (
+            {['Todos', 'Entradas', 'Pratos Principais', 'Drinks e Bebidas', 'Sobremesas'].map((category) => (
             <TouchableOpacity
               key={category}
-              style={[styles.button, 
-                      selectedButton === category && styles.selectedButton,]}
+              style={[styles.button,
+                      selectedButton === category && styles.selectedButton]}
               onPress={() => handleButtonClick(category)}
             >
               <Text style={[styles.buttonText, selectedButton === category && styles.selectedButtonText]}>
@@ -56,17 +58,17 @@ export default function MenuBtn() {
             ))}
           </View>
           </ScrollView>
-          
-          
+
           <FlatList
           data={foodList}
           keyExtractor={(item, index) => index.toString()}
           renderItem={renderPratoItem}
           style={styles.flatList}
           />
-          
-        </View>    
-    )
+
+        </View>
+    );
+
 }
 
 const styles = StyleSheet.create({
@@ -75,13 +77,13 @@ const styles = StyleSheet.create({
     paddingTop: 2,
   },
   flatList: {
-    marginTop: 16
+    marginTop: 16,
   },
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 5,
-    height: 40
+    height: 40,
   },
   button: {
     padding: 5,
@@ -97,7 +99,7 @@ const styles = StyleSheet.create({
   },
   pratoItemPreco: {
     fontSize: 14,
-    fontWeight: "bold"
+    fontWeight: 'bold',
   },
   buttonText: {
     color: 'black',
