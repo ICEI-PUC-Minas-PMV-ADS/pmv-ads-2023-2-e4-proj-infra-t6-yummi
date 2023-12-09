@@ -4,14 +4,15 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { userSchema } from '../schemas';
-import { createUser } from '../services';
+import { CreateUserDto, createUser } from '../services';
 
 export const useCreateUser = () => {
+
   const navigate = useNavigate();
   const { t } = useTranslation();
   const queryClient = useQueryClient();
 
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, control } = useForm<CreateUserDto>({
     resolver: yupResolver(userSchema(t))
   });
 

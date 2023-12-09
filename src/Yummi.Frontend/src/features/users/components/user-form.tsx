@@ -1,85 +1,72 @@
-import { FormItem } from '@/components/form';
-import { CreateUserDto } from '@/features/users/services';
-import { Button, Form, Input, Space, Upload } from 'antd';
-//import { UploadOutlined } from '@ant-design/icons';
-import { Control } from 'react-hook-form';
+
+import { CreateUserDto, createUser } from '@/features/users/services';
+import { Button, Form, Input, Select, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
-type Props = {
-  handleSubmit: (e?: React.BaseSyntheticEvent) => void | Promise<void>;
-  onCancel?: () => void;
-  control: Control<CreateUserDto, any>;
-  isSubmitting?: boolean;
-};
+export const UserForm = () => {
 
-export const UserForm = ({
-  handleSubmit,
-  onCancel,
-  control,
-  isSubmitting
-}: Props) => {
-  const { t } = useTranslation('users');
+  const [form] = Form.useForm();
+  const { t } = useTranslation('createUser');
+  const navigate = useNavigate();
+
+  const onFinish = async (values: CreateUserDto) => {
+    await createUser(values)
+      .then(() => navigate(`/users`))
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
+  const options = [
+    { value: 0, label: 'Administrador' },
+    { value: 1, label: 'Cliente' }
+  ];
+
+  const onCancel = () => navigate(`/users`);
 
   return (
     <Form
-      onFinish={handleSubmit}
       className="w-full max-w-2xl"
       layout="vertical"
+      form={form}
+      onFinish={onFinish}
     >
-      <FormItem<CreateUserDto>
-        control={control}
-        label={t('form.name')}
+      <Form.Item
+        label={t('Usuario')}
         name="name"
       >
         <Input />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateUserDto>
-        control={control}
-        label={t('form.email')}
-        name="email"
+      <Form.Item
+        label={t('Login')}
+        name="login"
       >
         <Input />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateUserDto>
-        control={control}
+      <Form.Item
         label={t('Senha')}
         name="password"
       >
         <Input.Password />
-      </FormItem>
+      </Form.Item>
 
-      <FormItem<CreateUserDto>
-        control={control}
-        label={t('Confirme sua senha')}
-        name="confirmPassword"
+      <Form.Item
+        label={t('Perfil')}
+        name="perfil"
       >
-        <Input.Password />
-      </FormItem>
-
-{/* 
-  <FormItem<CreateUserDto>
-    control={control}
-    label={t('Insira sua foto aqui')}
-    name="image"
-  >
-    <Upload
-      maxCount={1} 
-      accept="image/*" 
-      beforeUpload={() => false}
-    >
-      <Button icon={<UploadOutlined />}>Upload</Button>
-    </Upload>
-  </FormItem>
-*/}
-
+        <Select
+          options={options}
+        />
+      </Form.Item>
 
       <Space className="w-full justify-end">
         <Button htmlType="button" onClick={onCancel}>
           {t('dictionary:cancel')}
         </Button>
-        <Button type="primary" htmlType="submit" loading={isSubmitting}>
+        <Button type="primary" htmlType="submit">
           {t('dictionary:save')}
         </Button>
       </Space>

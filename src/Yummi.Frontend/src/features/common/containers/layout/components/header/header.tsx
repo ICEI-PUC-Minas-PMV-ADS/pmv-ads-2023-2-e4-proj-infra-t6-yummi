@@ -16,6 +16,7 @@ export const Header = (): JSX.Element => {
             <Button type="primary" onClick={onOpen} icon={<MenuOutlined />} />
           )}
 
+          <img src="src/assets/logo.jpeg" style={{ width: '100px', height: 'auto', display: 'flex', alignItems: 'center' }}/>
           <Typography.Title level={4} className="!text-white">
             YUMMI - Administrador
           </Typography.Title>

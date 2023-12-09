@@ -1,7 +1,15 @@
 export interface IUser {
+  id: number;
   name: string;
-  email: string;
+  login: string;
   password: string;
-  confirmPassword: string;
-  //image: ;
+  perfil: number;
+}
+
+export enum StatusEnum {
+  InAlert = 'InAlert',
+  InDowntime = 'InDowntime',
+  InOperation = 'InOperation',
+  PlannedStop = 'PlannedStop',
+  UnplannedStop = 'UnplannedStop'
 }

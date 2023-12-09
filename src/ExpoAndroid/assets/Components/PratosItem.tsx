@@ -1,15 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Pratos } from "../Data/PratosList";
 
 export function PratosItem({ name, image, preco, description }: Pratos) {
+  
+
+
   return(
     <View style={styles.container}>
       <Image style={{ width: 100, height: 80 }} source={image} />
       <View style={styles.content}>
         <Text style={styles.title}>{name}</Text>
-        <Text numberOfLines={5} style={styles.description}>{description}</Text>
         <Text style={styles.preco}>{preco}</Text>
+        <Text numberOfLines={5} style={styles.description}>{description}</Text>
       </View>
     </View>
   )

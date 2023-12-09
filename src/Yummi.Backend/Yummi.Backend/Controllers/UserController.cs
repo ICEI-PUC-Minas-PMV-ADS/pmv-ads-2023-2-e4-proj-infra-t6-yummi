@@ -65,7 +65,7 @@ namespace Yummi.Backend.Controllers
 
         [HttpPost("authenticate")]
         [AllowAnonymous]
-        public async Task<ActionResult<User>>LoginUser([FromBody] UserLoginDto userLoginDto)
+        public async Task<ActionResult<User>> LoginUser([FromBody] UserLoginDto userLoginDto)
         {
             try
             {
@@ -82,6 +82,25 @@ namespace Yummi.Backend.Controllers
             }
             catch (Exception e)
             {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult GetAllUsers(string name)
+        {
+            try
+            {
+                var users = _userRepository.GetAllUsers().AsQueryable();
+
+                if (!string.IsNullOrEmpty(name))
+                    users = users.Where(e => e.Name.ToLower().StartsWith(name.Trim().ToLower()));
+
+                return Ok(users.OrderBy(e => e.Name).ToList());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Erro ao buscar todos os usuários");
                 return BadRequest(e.Message);
             }
         }
