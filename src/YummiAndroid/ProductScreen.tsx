@@ -1,114 +1,121 @@
 /* eslint-disable prettier/prettier */
 import React, {useState, useEffect} from 'react';
-import {View, Text, FlatList, StyleSheet, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import axios from 'axios';
 import MeusPedidos from './assets/Src/MeusPedidos';
 
-
-
 function ProductScreen() {
-  const [product, setProducts] = useState([]);
-  const [selectedButton, setSelectedButton] = useState([]);
-  const [pedidos, setPedidos] = useState([])
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedButton, setSelectedButton] = useState('Todos');
+  const [pedidos, setPedidos] = useState([]);
   const [mostrarPedidos, setMostrarPedidos] = useState(false);
-  //const [flatListRef] = React.createRef();
 
   useEffect(() => {
     axios
       .get('http://10.0.2.2:5000/api/Product')
       .then(response => {
         setProducts(response.data);
-        console.log(response.data);
-        console.log(response.status);
-        // console.log(response.headers);
+        setFilteredProducts(response.data);
       })
       .catch(error => {
         console.log(error);
       });
-      setProducts(sortProducts(product));
-
   }, []);
   // eslint-disable-next-line react/no-unstable-nested-components
   const Item = ({item}) => (
     <View style={styles.pratoItemContainer}>
       <View style={styles.imageContainer}>
-      <Image
-        source={{
-          uri: `http://10.0.2.2:5000${item.imagePath?.replace('~', '')}`,
-        }}
-        style={styles.pratoImage}
-      />
-    </View>
+        <Image
+          source={{
+            uri: `http://10.0.2.2:5000${item.imagePath?.replace('~', '')}`,
+          }}
+          style={styles.pratoImage}
+        />
+      </View>
       <ScrollView>
         <View style={styles.textContainer}>
-          <Text style={styles.pratoItemText}>{item.name ?? 'Indisponível'}</Text>
+          <Text style={styles.pratoItemText}>
+            {item.name ?? 'Indisponível'}
+          </Text>
           <Text numberOfLines={5} style={styles.pratoItemDescricao}>
             {item.description ?? 'Indisponível'}
           </Text>
           <Text style={styles.pratoItemPreco}>
             R$ {item.price.toFixed(2) ?? 'Indisponível'}
           </Text>
-          <TouchableOpacity 
-          style={styles.adicionarButton}
-          onPress={() => handleAdicionarPress(item.name, item.preco)}>
-          <Text style={styles.adicionarButtonText}>Adicionar</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.adicionarButton}
+            onPress={() => handleAdicionarPress(item.name, item.preco)}>
+            <Text style={styles.adicionarButtonText}>Adicionar</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
   );
 
-  const filterPratosByCategoria = (category) => {
-    if (category === "Todos") {
+  const filterPratosByCategoria = category => {
+    if (category === 'Todos') {
       return product;
     } else {
-      return product.filter((item) => item.category === category);
+      return product.filter(item => item.category === category);
     }
   };
 
-  const handleButtonClick = (category) => {
-    // Update the selected button state
+  const handleButtonClick = category => {
     setSelectedButton(category);
-    // Filter products based on the chosen category
-    const filteredList = product.filter((item) => item.category === category);
-        // Sort the filtered list
-    const sortedList = filteredList.slice().sort((a, b) => a.name.localeCompare(b.name));
-    // Store the sorted list in state
-    setProducts(filteredList);
-
-
+    if (category === 'Todos') {
+      setFilteredProducts(products.slice());
+    } else {
+      setFilteredProducts(
+        products.filter(item => item.category === category)
+      );
+    }
   };
-  const sortProducts = (products) => {
+
+  const sortProducts = list => {
     // Sort the products by name
-    const sortedList = products.slice().sort((a, b) => a.name.localeCompare(b.name));
-    return sortedList;
+    return list.slice().sort((a, b) => a.name.localeCompare(b.name));
   };
-  
 
   const handleAdicionarPress = (name, preco) => {
-    const existiItemIdex = pedidos.findIndex(item => item.name === name)
 
-    if(existiItemIdex !== -1) {
-      const updatePedidos = [...pedidos]
-      updatePedidos[existiItemIdex].quantidade += 1
-      updatePedidos[existiItemIdex].precoItem += Number(preco)
-      setPedidos(updatePedidos)
+    const existiItemIdex = pedidos.findIndex(item => item.name === name);
+
+    if (existiItemIdex !== -1) {
+      const updatePedidos = [...pedidos];
+      updatePedidos[existiItemIdex].quantidade += 1;
+      updatePedidos[existiItemIdex].precoItem += Number(preco);
+      setPedidos(updatePedidos);
     } else {
-      const novoPedido = { name, preco: Number(preco), quantidade: 1, precoItem: Number(preco)}
-      setPedidos([...pedidos, novoPedido])
+      const novoPedido = {
+        name,
+        preco: Number(preco),
+        quantidade: 1,
+        precoItem: Number(preco),
+      };
+      setPedidos([...pedidos, novoPedido]);
     }
-    console.log(`Adicionar ${name} ao carrinho`)
+    console.log(`Adicionar ${name} ao carrinho`);
     //flatListRef.current.scrollToIndex({index: pedidos.length - 1 , animated: true})
-    setMostrarPedidos(true)
-  }
+    setMostrarPedidos(true);
+  };
 
-  const handleRemoverItem = (index) => {
+  const handleRemoverItem = index => {
     const novosPedidos = [...pedidos];
     novosPedidos.splice(index, 1);
     setPedidos(novosPedidos);
 
     if (novosPedidos.length === 0) {
-      setMostrarPedidos(false)
+      setMostrarPedidos(false);
     }
   };
 
@@ -118,42 +125,51 @@ function ProductScreen() {
 
   return (
     <View>
-      <ScrollView horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.scrollViewContent}>
-          <View style={styles.buttonsContainer}>
-            {["Todos", "Entradas", "Pratos Principais", "Drinks e Bebidas", "Sobremesas"].map((category) => (
-            <TouchableOpacity
-              key={category}
-              style={[styles.button, selectedButton === category && styles.selectedButton,]}
-              onPress={() => handleButtonClick(category)}
-            >
-              <Text style={[styles.buttonText, selectedButton === category && styles.selectedButtonText]}>
-                {category}
-              </Text>
-            </TouchableOpacity>
-            ))}
-          </View>
-          </ScrollView>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.scrollViewContent}>
+        <View style={styles.buttonsContainer}>
+          {['Todos', 'Entradas', 'Pratos Principais', 'Drinks e Bebidas', 'Sobremesas'].map(
+            category => (
+              <TouchableOpacity
+                key={category}
+                style={[
+                  styles.button,
+                  selectedButton === category && styles.selectedButton,
+                ]}
+                onPress={() => handleButtonClick(category)}>
+                <Text
+                  style={[
+                    styles.buttonText,
+                    selectedButton === category && styles.selectedButtonText,
+                  ]}>
+                  {category}
+                </Text>
+              </TouchableOpacity>
+            )
+          )}
+        </View>
+      </ScrollView>
 
 
       <FlatList
-        data={sortProducts(product)}
+        data={sortProducts(filteredProducts)}
         renderItem={Item}
         keyExtractor={item => item.id}
-        style={styles.flatList}
-        height={500}
-      />
+             />
 
-{mostrarPedidos && (
+      {mostrarPedidos && (
+        
             <MeusPedidos
-            pedidos={pedidos}
-            onRemoverItem={handleRemoverItem}
-            onClose={() => {
-              setMostrarPedidos(false)
-              handleLimparPedidos()
-            }}
-          />
+              pedidos={pedidos}
+              onRemoverItem={handleRemoverItem}
+              onClose={() => {
+                setMostrarPedidos(false);
+                handleLimparPedidos();
+              }}
+            />
+
       )}
     </View>
   );
@@ -179,7 +195,7 @@ const styles = StyleSheet.create({
     marginTop: 3,
     borderRadius: 5,
     alignItems: 'center',
-    width: 60
+    width: 60,
   },
   adicionarButtonText: {
     color: 'white',
@@ -188,13 +204,12 @@ const styles = StyleSheet.create({
   },
   flatList: {
     marginTop: 16,
-    
   },
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 5,
-    height: 40
+    height: 40,
   },
   button: {
     padding: 5,
@@ -212,7 +227,7 @@ const styles = StyleSheet.create({
   pratoItemPreco: {
     color: 'black',
     fontSize: 14,
-    fontWeight: "bold"
+    fontWeight: 'bold',
   },
   pratoItemDescricao: {
     color: 'black',
@@ -252,6 +267,5 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
   },
-  
 });
 export default ProductScreen;
