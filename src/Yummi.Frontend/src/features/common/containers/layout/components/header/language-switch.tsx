@@ -1,44 +1,27 @@
 import { useIsMobile } from '@/hooks';
-import Icon from '@ant-design/icons';
-import { Button, Dropdown } from 'antd';
-import { useTranslation } from 'react-i18next';
-import { MdGTranslate } from 'react-icons/md';
-
-const items = [
-  {
-    key: 'pt',
-    label: 'Português'
-  },
-  {
-    key: 'en',
-    label: 'English'
-  }
-];
+import { Menu, Dropdown, Button } from 'antd';
+import { FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export const LanguageSwitch = (): JSX.Element => {
-  const { i18n, t } = useTranslation('layout');
   const isMobile = useIsMobile();
 
+  const menuToShow = (
+    <Menu>
+      <Menu.Item key="profile">
+        <Link to="/users">Meu Perfil</Link>
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
-    <Dropdown
-      menu={{
-        items: items.map(item => ({
-          ...item,
-          onClick: () => i18n.changeLanguage(item.key)
-        })),
-        className: '!p-2'
-      }}
-      trigger={['click']}
-      arrow
-    >
+    <Dropdown overlay={menuToShow} trigger={['click']} arrow>
       <Button
-        aria-label={t('change-language')}
+        aria-label={isMobile ? 'Meu Perfil' : 'change-language'}
         size="large"
         type="primary"
-        icon={<Icon component={MdGTranslate} />}
-      >
-        {isMobile ? null : t('change-language')}
-      </Button>
+        icon={<FaUser />}
+      />
     </Dropdown>
   );
 };
