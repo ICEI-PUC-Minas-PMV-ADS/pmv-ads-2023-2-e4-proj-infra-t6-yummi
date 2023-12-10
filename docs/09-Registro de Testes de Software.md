@@ -16,7 +16,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Verifiquei se a lista de pratos foi exibida corretamente com descrições e preços.
     3. Confirmei se a lista de pratos estava atualizada de acordo com o cardápio do restaurante.
 - **Critérios de Êxito:** A lista de pratos é exibida corretamente e está atualizada de acordo com o cardápio.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Concluído.
 
 #### RF-002: Organização por Categorias
 
@@ -25,7 +25,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     1. Acessei o cardápio do restaurante no sistema.
     2. Verifiquei se os pratos estão organizados corretamente nas categorias (entradas, pratos principais, sobremesas, etc.).
 - **Critérios de Êxito:** Os pratos estão organizados nas categorias corretas.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Concluído.
 
 #### RF-003: Informações Detalhadas dos Pratos
 
@@ -35,7 +35,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Cliquei em um prato para ver suas informações detalhadas.
     3. Verifiquei se as informações detalhadas, como ingredientes e quantidades, foram exibidas corretamente.
 - **Critérios de Êxito:** As informações detalhadas do prato são exibidas corretamente.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Concluído.
 
 #### RF-004: Inclusão de Imagens
 
@@ -45,7 +45,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Fiz o upload de uma imagem de alta qualidade para um prato.
     3. Verifiquei se a imagem foi carregada e exibida corretamente.
 - **Critérios de Êxito:** A imagem é carregada e exibida corretamente.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Concluído.
 
 #### RF-005: Adicionar Itens ao Carrinho
 
@@ -55,7 +55,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Adicionei um ou mais itens ao carrinho.
     3. Verifiquei se os itens foram refletidos corretamente no carrinho.
 - **Critérios de Êxito:** Os itens foram adicionados ao carrinho e refletidos de forma precisa.
-- **Resultado:** Não implementado.
+- **Resultado:** Concluído.
 
 #### RF-006: Criação de Contas Personalizadas
 
@@ -65,7 +65,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Preenchi as informações necessárias para criar uma conta de restaurante.
     3. Verifiquei se a conta foi criada com sucesso.
 - **Critérios de Êxito:** A conta de restaurante é criada com sucesso.
-- **Resultado:** Recurso não foi implementado.
+- **Resultado:** Concluído.
 
 #### RF-007: Visualização do Resumo de Pedidos
 
@@ -75,7 +75,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Acessei o carrinho e verifiquei se era possível visualizar o resumo dos itens e seus detalhes.
     3. Finalizei o pedido.
 - **Critérios de Êxito:** Os clientes podem visualizar o resumo de seus pedidos antes de finalizá-los.
-- **Resultado:** Não implementado.
+- **Resultado:** Concluído.
 
 #### RF-008: Recebimento de Pedidos em Tempo Real
 
@@ -84,7 +84,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     1. Fiz um pedido como cliente.
     2. Verifiquei se a equipe do restaurante recebeu o pedido em tempo real.
 - **Critérios de Êxito:** A equipe do restaurante não recebe o pedido em tempo real.
-- **Resultado:** Não implementado.
+- **Resultado:** Falhou.
 
 #### RF-009: Pedidos Especiais
 
@@ -104,7 +104,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Observei as instruções fornecidas para utilização do cardápio.
     3. Verifiquei se as instruções eram claras e compreensíveis.
 - **Critérios de Êxito:** As instruções são claras e compreensíveis.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Concluído.
 
 #### RF-011: Login com E-mail e Senha
 
@@ -114,7 +114,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     2. Inseri o e-mail e a senha corretos.
     3. Verifiquei se o login foi bem-sucedido.
 - **Critérios de Êxito:** Os usuários podem fazer login com sucesso usando e-mail e senha.
-- **Resultado:** Concluído com sucesso.
+- **Resultado:** Falhou.
 
 ### Registro de Testes - Requisitos Não Funcionais:
 
@@ -125,7 +125,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
     1. Acessei o cardápio digital a partir de diferentes dispositivos (smartphones, tablets, computadores) e navegadores.
     2. Verifiquei se o cardápio foi exibido corretamente em todos os casos.
 - **Critérios de Êxito:** O cardápio é exibido corretamente em todos os dispositivos e navegadores testados.
-- **Resultado:** Não realizado.
+- **Resultado:** Concluído.
   
 #### RNF-002: Tempo de Inserção
 
