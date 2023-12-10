@@ -13,22 +13,25 @@ import axios from 'axios';
 import MeusPedidos from './assets/Src/MeusPedidos';
 
 function ProductScreen() {
-  const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [selectedButton, setSelectedButton] = useState('Todos');
+  const [product, setProducts] = useState([]);
+  const [selectedButton, setSelectedButton] = useState([]);
   const [pedidos, setPedidos] = useState([]);
   const [mostrarPedidos, setMostrarPedidos] = useState(false);
+  //const [flatListRef] = React.createRef();
 
   useEffect(() => {
     axios
       .get('http://10.0.2.2:5000/api/Product')
       .then(response => {
         setProducts(response.data);
-        setFilteredProducts(response.data);
+        console.log(response.data);
+        console.log(response.status);
+        // console.log(response.headers);
       })
       .catch(error => {
         console.log(error);
       });
+    setProducts(sortProducts(product));
   }, []);
   // eslint-disable-next-line react/no-unstable-nested-components
   const Item = ({item}) => (
@@ -71,23 +74,26 @@ function ProductScreen() {
   };
 
   const handleButtonClick = category => {
+    // Update the selected button state
     setSelectedButton(category);
-    if (category === 'Todos') {
-      setFilteredProducts(products.slice());
-    } else {
-      setFilteredProducts(
-        products.filter(item => item.category === category)
-      );
-    }
+    // Filter products based on the chosen category
+    const filteredList = product.filter(item => item.category === category);
+    // Sort the filtered list
+    const sortedList = filteredList
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name));
+    // Store the sorted list in state
+    setProducts(filteredList);
   };
-
-  const sortProducts = list => {
+  const sortProducts = products => {
     // Sort the products by name
-    return list.slice().sort((a, b) => a.name.localeCompare(b.name));
+    const sortedList = products
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name));
+    return sortedList;
   };
 
   const handleAdicionarPress = (name, preco) => {
-
     const existiItemIdex = pedidos.findIndex(item => item.name === name);
 
     if (existiItemIdex !== -1) {
@@ -105,6 +111,7 @@ function ProductScreen() {
       setPedidos([...pedidos, novoPedido]);
     }
     console.log(`Adicionar ${name} ao carrinho`);
+    console.log(Number(preco));
     //flatListRef.current.scrollToIndex({index: pedidos.length - 1 , animated: true})
     setMostrarPedidos(true);
   };
@@ -130,37 +137,41 @@ function ProductScreen() {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.buttonsContainer}>
-          {['Todos', 'Entradas', 'Pratos Principais', 'Drinks e Bebidas', 'Sobremesas'].map(
-            category => (
-              <TouchableOpacity
-                key={category}
+          {[
+            'Todos',
+            'Entradas',
+            'Pratos Principais',
+            'Drinks e Bebidas',
+            'Sobremesas',
+          ].map(category => (
+            <TouchableOpacity
+              key={category}
+              style={[
+                styles.button,
+                selectedButton === category && styles.selectedButton,
+              ]}
+              onPress={() => handleButtonClick(category)}>
+              <Text
                 style={[
-                  styles.button,
-                  selectedButton === category && styles.selectedButton,
-                ]}
-                onPress={() => handleButtonClick(category)}>
-                <Text
-                  style={[
-                    styles.buttonText,
-                    selectedButton === category && styles.selectedButtonText,
-                  ]}>
-                  {category}
-                </Text>
-              </TouchableOpacity>
-            )
-          )}
+                  styles.buttonText,
+                  selectedButton === category && styles.selectedButtonText,
+                ]}>
+                {category}
+              </Text>
+            </TouchableOpacity>
+          ))}
         </View>
       </ScrollView>
 
-
       <FlatList
-        data={sortProducts(filteredProducts)}
+        data={sortProducts(product)}
         renderItem={Item}
         keyExtractor={item => item.id}
-             />
+        style={styles.flatList}
+        height={500}
+      />
 
       {mostrarPedidos && (
-        
             <MeusPedidos
               pedidos={pedidos}
               onRemoverItem={handleRemoverItem}
