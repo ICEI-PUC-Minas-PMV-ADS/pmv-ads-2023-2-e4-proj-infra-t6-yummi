@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useDeleteWorkOrder } from '../../hooks';
 import { useListWorkOrders } from '../../services';
 import { ListOrdersTable } from './components';
+import { OrderStatus } from '../../entities';
 
 export const Component = () => {
   const { t } = useTranslation('workOrders');
@@ -13,6 +14,28 @@ export const Component = () => {
   const { data = [], isLoading } = useListWorkOrders(search);
   const { deleteModal, onDelete } = useDeleteWorkOrder();
 
+  data.push(  
+    { 
+    id: "657657f34fadd4d1e5f3f64c",
+    assetId: 5,
+    assignedUserIds: [1, 2, 3],
+    title: "Mesa 5",
+    description: " ",
+    checklist: [],
+    status: OrderStatus.InProgress
+    },
+
+    { 
+      id: "657659f55366892d46b865cd",
+      assetId: 9,
+      assignedUserIds: [1, 2, 3],
+      title: "Mesa 21",
+      description: " ",
+      checklist: [],
+      status: OrderStatus.Completed
+      }
+    )
+    
   return (
     <Card className="w-full">
       <Space direction="vertical" className="w-full" size={24}>

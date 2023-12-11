@@ -13,7 +13,7 @@ import {
   useGetWorkOrder
 } from '../services';
 
-export const useEditWorkOrder = (id: number) => {
+export const useEditWorkOrder = (id: string) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const queryClient = useQueryClient();

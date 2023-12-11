@@ -1,4 +1,4 @@
-/*import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -42,4 +42,3 @@ export const useEditUser = (id: string) => {
     isLoading
   };
 };
-*/

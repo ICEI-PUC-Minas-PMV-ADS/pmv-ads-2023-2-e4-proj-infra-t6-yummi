@@ -13,7 +13,7 @@ export const Component = (): JSX.Element => {
   const navigate = useNavigate();
 
   const { control, handleSubmit, initialValues, isSubmitting, isLoading } =
-    useEditProduct(Number(id));
+    useEditProduct(String(id));
 
   if (isLoading) {
     return <LoadingState />;

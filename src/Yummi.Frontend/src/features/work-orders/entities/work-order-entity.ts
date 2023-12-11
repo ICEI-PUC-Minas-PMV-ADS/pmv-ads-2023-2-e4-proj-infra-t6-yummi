@@ -1,5 +1,5 @@
 export interface IWorkOrder {
-  id: number;
+  id: string;
   assetId: number;
   assignedUserIds: number[];
   title: string;

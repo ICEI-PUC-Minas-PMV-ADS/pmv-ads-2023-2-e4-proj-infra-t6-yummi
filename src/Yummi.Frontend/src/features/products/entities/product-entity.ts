@@ -1,5 +1,5 @@
 export interface IProduct {
-  id: number;
+  id: string;
   status: StatusEnum;
   assignedUserIds: number[];
   name: string;

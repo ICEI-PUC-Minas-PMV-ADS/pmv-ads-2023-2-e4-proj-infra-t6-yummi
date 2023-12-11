@@ -1,4 +1,4 @@
-/*import { LoadingState } from '@/components/feedback';
+import { LoadingState } from '@/components/feedback';
 import { PageHeader } from '@/components/layout';
 import { useEditUser } from '@/features/users/hooks';
 import { Card, Space } from 'antd';
@@ -36,4 +36,4 @@ export const Component = (): JSX.Element | null => {
       </Space>
     </Card>
   );
-};*/
+};
