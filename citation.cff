@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title:
+authors:
+  - family-names: Vicente do Vale Melo
+    given-names: José
+  - family-names: Franco Alavarque Escobedo
+    given-names: Karen
+  - family-names: Carlos Gil de Souza
+    given-names: Luiz
+  - family-names: Vitor Rodrigues da Silva
+    given-names: Pedro
+  - family-names: Liberato Ferreira
+    given-names: Renato
+  - family-names: Daniela Figueiredo Barbosa
+    given-names: Ursula
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Felipe Alves de Oliveira
+    given-names: Pedro
+keywords:
+  - cardápio
+  - gestão 
+  - pedidos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-yummi
+version: 1.0.0
+date-released: 2023-12-10
